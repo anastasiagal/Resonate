@@ -1,0 +1,249 @@
+html {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.body {
+    color: #010101; 
+}
+
+.hero {
+    background-color: #010101;
+    background-image: linear-gradient(rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url('../images/hero-bg.jpg');
+    width: 100%;
+    height: 396px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    position: relative;
+}
+
+.hero__title {
+    margin: 0 auto;
+    text-align: center;
+    padding: 120px 0 140px;
+    color: #fff;
+    font-size: 62px;
+    line-height: 68px;
+    letter-spacing: 1.4px;
+    max-width: 730px;
+}
+
+.block {
+    padding-top: 100px;
+    margin-bottom: 90px;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.block__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.block__item {
+    max-width: 360px;
+    min-height: 500px;
+    padding: 30px;
+    border: 1px solid #D3D8E4;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.block__category {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 6px 15px 8px 16px;
+    background-color: #00B6DD;
+    color: #fff;
+}
+
+.block__category--color {
+    background-color: #081580;
+}
+
+.block__img {
+    margin-bottom: 20px;
+}
+
+.block__author {
+    color: #00B6DD;
+    margin-bottom: 6px;
+}
+
+.block__author--color {
+    color: #081580;
+}
+
+.block__author, 
+.block__btn {
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+}
+
+.block__title {
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.block__text {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.8px;
+}
+
+.block__btn {
+    display: block;
+    border: none;
+    width: 140px;
+    padding: 9px 11px;
+    background-color: #00B6DD;
+    color: #fff;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: opacity 0.4s ease-out;
+    opacity: 1.0;
+}
+
+.block__btn:hover {
+    opacity: 0.6;
+}
+
+.block__btn--color {
+    background-color: #081580;
+}
+
+
+/*Responsive*/
+
+/* 922px - 1200px */
+@media screen and (max-width: 1200px) {
+    .hero {
+        height: 340px;
+    }
+    .hero__title {
+        padding: 100px 0 120px;
+        font-size: 54px;
+        line-height: 60px;
+        letter-spacing: 1.2px;
+        max-width: 630px;
+    }
+    .block {
+        padding-top: 80px;
+        margin-bottom: 70px;
+
+    }
+}
+
+/* 768px - 922px */
+@media screen and (max-width: 992px) {
+    .container {
+        margin: 0 15px;
+    }
+    .hero {
+        height: 276px;
+    }
+    .hero__title {
+        padding: 80px 0 100px;
+        font-size: 46px;
+        line-height: 48px;
+        letter-spacing: 1px;
+        max-width: 450px;
+    }
+    .block {
+        padding-top: 60px;
+        margin-bottom: 40px;
+    }
+    .block__item {
+        max-width: 465px;
+        min-height: 469px;
+    }
+    .block__img {
+        max-height: 170px;
+    }
+    .block__title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 236px;
+    }
+    .hero__title {
+        padding: 60px 0 80px;
+    }
+    .block {
+        padding-top: 50px;
+        margin-bottom: 30px;
+    }
+    .block__item {
+        max-width: 345px;
+        min-height: 440px;
+    }
+    .block__category {
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 1px;
+    }
+    .block__img {
+        margin-bottom: 18px;
+    }
+    .block__author {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .block__title {
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+    }
+    .block__text {
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.6px;
+    }
+    .block__btn {
+        font-size: 12px;
+        line-height: 18px;
+}
+
+/* 0 - 576px */
+@media screen and (max-width: 576px) {
+    .hero {
+        height: 274px;
+    }
+    .hero__title {
+        padding-bottom: 70px;
+        max-width: 285px;
+    }
+    .block__item {
+        max-width: 546px;
+        min-height: 418px;
+    }
+    .block__img {
+        margin-bottom: 12px;
+    }
+    .block__title {
+        margin-bottom: 10px;
+    }
+}
