@@ -12,7 +12,7 @@ html {
     width: 100%;
     height: 396px;
     background-repeat: no-repeat;
-    background-position: top left;
+    background-position: center;
     background-size: cover;
     position: relative;
 }
@@ -56,6 +56,18 @@ html {
     justify-content: space-between;
 }
 
+.card__item.card__item_clr-blue .card__category {
+    background-color: #081580;
+}
+
+.card__item.card__item_clr-blue .card__author {
+    color: #081580;
+}
+
+.card__item.card__item_clr-blue .card__btn {
+    background-color: #081580;
+}
+
 .card__category {
     position: absolute;
     top: 12px;
@@ -67,10 +79,6 @@ html {
     padding: 6px 15px 8px 16px;
     background-color: #00B6DD;
     color: #fff;
-}
-
-.card__category_color {
-    background-color: #081580;
 }
 
 .card__img {
@@ -111,7 +119,7 @@ html {
     margin-bottom: 6px;
 }
 
-.card__author_color {
+.card__author_blue {
     color: #081580;
 }
 
@@ -153,7 +161,7 @@ html {
     opacity: 0.6;
 }
 
-.card__btn_color {
+.card__btn_blue {
     background-color: #081580;
 }
 
@@ -200,9 +208,6 @@ html {
     }
     .card__item {
         max-width: 45%;
-    }
-    .card__img {
-        max-height: 170px;
     }
     .card__title {
         font-size: 20px;
