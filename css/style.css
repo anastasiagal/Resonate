@@ -28,7 +28,7 @@ html {
     max-width: 730px;
 }
 
-.block {
+.card {
     padding-top: 100px;
     margin-bottom: 90px;
 }
@@ -38,7 +38,7 @@ html {
     margin: 0 auto;
 }
 
-.block__items {
+.card__items {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -46,9 +46,8 @@ html {
     row-gap: 30px;
 }
 
-.block__item {
-    max-width: 360px;
-    min-height: 500px;
+.card__item {
+    max-width: 30%;
     padding: 30px;
     border: 1px solid #D3D8E4;
     position: relative;
@@ -57,7 +56,7 @@ html {
     justify-content: space-between;
 }
 
-.block__category {
+.card__category {
     position: absolute;
     top: 12px;
     left: 0;
@@ -70,31 +69,60 @@ html {
     color: #fff;
 }
 
-.block__category--color {
+.card__category_color {
     background-color: #081580;
 }
 
-.block__img {
+.card__img {
+    width: 100%;
+    height: 170px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
     margin-bottom: 20px;
 }
 
-.block__author {
+.card__img_one {
+    background-image: url('../images/card_1.jpg');
+}
+
+.card__img_two {
+    background-image: url('../images/card_2.jpg');
+}
+
+.card__img_three {
+    background-image: url('../images/card_3.jpg');
+}
+
+.card__img_four {
+    background-image: url('../images/card_4.jpg');
+}
+
+.card__img_five {
+    background-image: url('../images/card_5.jpg');
+}
+
+.card__img_six {
+    background-image: url('../images/card_6.jpg');
+}
+
+.card__author {
     color: #00B6DD;
     margin-bottom: 6px;
 }
 
-.block__author--color {
+.card__author_color {
     color: #081580;
 }
 
-.block__author, 
-.block__btn {
+.card__author, 
+.card__btn {
     font-size: 13px;
     line-height: 20px;
     letter-spacing: 0.8px;
 }
 
-.block__title {
+.card__title {
     font-size: 22px;
     line-height: 30px;
     letter-spacing: 1.2px;
@@ -102,13 +130,13 @@ html {
     margin-bottom: 16px;
 }
 
-.block__text {
+.card__text {
     font-size: 16px;
     line-height: 26px;
     letter-spacing: 0.8px;
 }
 
-.block__btn {
+.card__btn {
     display: block;
     border: none;
     width: 140px;
@@ -121,11 +149,11 @@ html {
     opacity: 1.0;
 }
 
-.block__btn:hover {
+.card__btn:hover {
     opacity: 0.6;
 }
 
-.block__btn--color {
+.card__btn_color {
     background-color: #081580;
 }
 
@@ -144,7 +172,7 @@ html {
         letter-spacing: 1.2px;
         max-width: 630px;
     }
-    .block {
+    .card {
         padding-top: 80px;
         margin-bottom: 70px;
 
@@ -166,18 +194,17 @@ html {
         letter-spacing: 1px;
         max-width: 450px;
     }
-    .block {
+    .card {
         padding-top: 60px;
         margin-bottom: 40px;
     }
-    .block__item {
-        max-width: 465px;
-        min-height: 469px;
+    .card__item {
+        max-width: 45%;
     }
-    .block__img {
+    .card__img {
         max-height: 170px;
     }
-    .block__title {
+    .card__title {
         font-size: 20px;
         line-height: 28px;
     }
@@ -191,38 +218,34 @@ html {
     .hero__title {
         padding: 60px 0 80px;
     }
-    .block {
+    .card {
         padding-top: 50px;
         margin-bottom: 30px;
     }
-    .block__item {
-        max-width: 345px;
-        min-height: 440px;
-    }
-    .block__category {
+    .card__category {
         font-size: 12px;
         line-height: 20px;
         letter-spacing: 1px;
     }
-    .block__img {
+    .card__img {
         margin-bottom: 18px;
     }
-    .block__author {
+    .card__author {
         font-size: 12px;
         line-height: 18px;
     }
-    .block__title {
+    .card__title {
         font-size: 18px;
         line-height: 26px;
         letter-spacing: 1px;
         margin-bottom: 12px;
     }
-    .block__text {
+    .card__text {
         font-size: 14px;
         line-height: 22px;
         letter-spacing: 0.6px;
     }
-    .block__btn {
+    .card__btn {
         font-size: 12px;
         line-height: 18px;
 }
@@ -236,14 +259,13 @@ html {
         padding-bottom: 70px;
         max-width: 285px;
     }
-    .block__item {
-        max-width: 546px;
-        min-height: 418px;
+    .card__item {
+        max-width: 100%;
     }
-    .block__img {
+    .card__img {
         margin-bottom: 12px;
     }
-    .block__title {
+    .card__title {
         margin-bottom: 10px;
     }
 }
