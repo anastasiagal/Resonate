@@ -1,0 +1,154 @@
+$white: #fff;
+$dark-blue: #081580;
+$light-blue: #00B6DD;
+$black: #010101;
+$black-rgba: rgba(1, 1, 1, 0.6);
+$grey: #D3D8E4;
+
+@mixin background-mixin {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+html {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    color: $black;
+}
+
+.hero {
+    @include background-mixin;
+    
+    background-color: $black;
+    background-image: linear-gradient($black-rgba, $black-rgba), url('../images/hero-bg.jpg');
+    position: relative;
+    width: 100%;
+    padding: 120px 0 140px;
+}
+
+.hero__title {
+    margin: 0 auto;
+    text-align: center;
+    color: $white;
+    font-size: 62px;
+    line-height: 68px;
+    letter-spacing: 1.4px;
+    max-width: 730px;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.card {
+    $root: &; // ссылка на родителя (в данном случае card)
+
+    padding-top: 100px;
+    margin-bottom: 90px;
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+
+    &__item {
+        max-width: 30%;
+        padding: 30px;
+        border: 1px solid $grey;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+  
+    &__category,
+    &__btn {
+      #{$root}__item_clr-blue & { // если на item висит модификатор clr-blue, то меняем цвет фона у category
+        background-color: $dark-blue;
+      }
+    }
+
+    &__author {
+        #{$root}__item_clr-blue & { // если на item висит модификатор clr-blue, то меняем цвет фона у category
+            color: $dark-blue;
+        }
+    }
+
+    &__category {
+        position: absolute;
+        top: 12px;
+        left: 0;
+        font-size: 13px;
+        line-height: 22px;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        padding: 6px 15px 8px 16px;
+        background-color: $light-blue;
+        color: $white;
+    }
+
+    &__img {
+        @include background-mixin;
+        height: 170px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 20px;
+    }
+
+    $nums: one, two, three, four, five, six;
+
+    @each $num in $nums {
+        &__img_#{$num} {
+            background-image: url('../images/card_#{$num}.jpg');
+        }
+    }
+
+    &__author {
+        color: $light-blue;
+        margin-bottom: 6px;
+    }
+
+    &__author,
+    &__btn {
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 0.8px;
+    }
+  
+    &__title {
+        margin-bottom: 16px;
+  
+    //   @include breakpoint-sm { // пример использования миксина с media, пишем media ВСЕГДА внутри нужного нам класса
+    //     margin-bottom: 10px;
+    //   }
+    // }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.8px;
+    }
+
+    &__btn {
+        border: none;
+        padding: 9px 35px 11px;
+        background-color: $light-blue;
+        color: $white;
+        margin-top: 30px;
+        cursor: pointer;
+        transition: opacity 0.4s ease-out;
+        opacity: 1.0;
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
