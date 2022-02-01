@@ -11,6 +11,30 @@ $grey: #D3D8E4;
     background-size: cover;
 }
 
+@mixin breakpoint-md {
+    @media screen and (max-width: 1200px){
+        @content;
+    }
+}
+
+@mixin breakpoint-sm {
+    @media screen and (max-width: 922px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-xs {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-xxs {
+    @media screen and (max-width: 576px) {
+        @content;
+    }
+}
+
 html {
     font-family: 'Noto Sans', sans-serif;
 }
@@ -27,21 +51,59 @@ body {
     position: relative;
     width: 100%;
     padding: 120px 0 140px;
-}
 
-.hero__title {
-    margin: 0 auto;
-    text-align: center;
-    color: $white;
-    font-size: 62px;
-    line-height: 68px;
-    letter-spacing: 1.4px;
-    max-width: 730px;
+    @include breakpoint-md {
+        padding: 100px 0 120px;
+    }
+
+    @include breakpoint-sm {
+        padding: 80px 0 100px;
+    }
+
+    @include breakpoint-xs {
+        padding: 60px 0 80px;
+    }
+
+    @include breakpoint-xxs {
+        padding-bottom: 70px; 
+    }
+
+    &__title {
+        margin: 0 auto;
+        text-align: center;
+        color: $white;
+        font-size: 62px;
+        line-height: 68px;
+        letter-spacing: 1.4px;
+        max-width: 730px;
+
+        @include breakpoint-md {
+            font-size: 54px;
+            line-height: 60px;
+            letter-spacing: 1.2px;
+            max-width: 630px;
+        }
+
+        @include breakpoint-sm {
+            font-size: 46px;
+            line-height: 48px;
+            letter-spacing: 1px;
+            max-width: 450px;
+        }
+
+        @include breakpoint-xxs {
+            max-width: 285px;
+        }
+    }
 }
 
 .container {
     max-width: 1140px;
     margin: 0 auto;
+
+    @include breakpoint-sm {
+        margin: 0 15px;
+    }
 }
 
 .card {
@@ -49,6 +111,21 @@ body {
 
     padding-top: 100px;
     margin-bottom: 90px;
+
+    @include breakpoint-md {
+        padding-top: 80px;
+        margin-bottom: 70px;
+    }
+
+    @include breakpoint-sm {
+        padding-top: 60px;
+        margin-bottom: 40px;
+    }
+
+    @include breakpoint-xs {
+        padding-top: 50px;
+        margin-bottom: 30px;
+    }
 
     &__items {
         display: flex;
@@ -66,18 +143,15 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    }
-  
-    &__category,
-    &__btn {
-      #{$root}__item_clr-blue & { // если на item висит модификатор clr-blue, то меняем цвет фона у category
-        background-color: $dark-blue;
-      }
-    }
 
-    &__author {
-        #{$root}__item_clr-blue & { // если на item висит модификатор clr-blue, то меняем цвет фона у category
-            color: $dark-blue;
+        @include breakpoint-sm {
+            padding: 28px;
+            max-width: 45%;
+        }
+
+        @include breakpoint-xxs {
+            padding: 16px;
+            max-width: 100%;
         }
     }
 
@@ -92,15 +166,34 @@ body {
         padding: 6px 15px 8px 16px;
         background-color: $light-blue;
         color: $white;
+
+        #{$root}__item_clr-blue & { // если на item висит модификатор clr-blue, то меняем цвет фона у category
+            background-color: $dark-blue;
+        }
+
+        @include breakpoint-xs {
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 1px;
+        }
     }
 
     &__img {
         @include background-mixin;
+
         height: 170px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         margin-bottom: 20px;
+
+        @include breakpoint-xs {
+            margin-bottom: 18px;
+        }
+
+        @include breakpoint-xxs {
+            margin-bottom: 12px;
+        }
     }
 
     $nums: one, two, three, four, five, six;
@@ -114,6 +207,15 @@ body {
     &__author {
         color: $light-blue;
         margin-bottom: 6px;
+
+        #{$root}__item_clr-blue & { // если на item висит модификатор clr-blue, то меняем цвет фона у category
+            color: $dark-blue;
+        }
+
+        @include breakpoint-xs {
+            font-size: 12px;
+            line-height: 18px;
+        }
     }
 
     &__author,
@@ -124,18 +226,39 @@ body {
     }
   
     &__title {
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: 1.2px;
+        font-weight: 400;
         margin-bottom: 16px;
-  
-    //   @include breakpoint-sm { // пример использования миксина с media, пишем media ВСЕГДА внутри нужного нам класса
-    //     margin-bottom: 10px;
-    //   }
-    // }
+
+        @include breakpoint-sm {
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        @include breakpoint-xs {
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        @include breakpoint-xxs {
+            margin-bottom: 10px;
+        }
     }
 
     &__text {
         font-size: 16px;
         line-height: 26px;
         letter-spacing: 0.8px;
+
+        @include breakpoint-xs {
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: 0.6px;
+        }
     }
 
     &__btn {
@@ -149,6 +272,20 @@ body {
         opacity: 1.0;
         &:hover {
             opacity: 0.6;
+        }
+
+        #{$root}__item_clr-blue & { // если на item висит модификатор clr-blue, то меняем цвет фона у category
+            background-color: $dark-blue;
+        }
+
+        @include breakpoint-sm {
+            padding: 9px 30px 11px;
+        }
+
+        @include breakpoint-xs {
+            padding: 8px 28px 10px; 
+            font-size: 12px;
+            line-height: 18px;
         }
     }
 }
