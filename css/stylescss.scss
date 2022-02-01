@@ -194,13 +194,13 @@ body {
         @include breakpoint-xxs {
             margin-bottom: 12px;
         }
-    }
 
-    $nums: one, two, three, four, five, six;
+        $nums: one, two, three, four, five, six;
 
-    @each $num in $nums {
-        &__img_#{$num} {
-            background-image: url('../images/card_#{$num}.jpg');
+        @each $num in $nums {
+            &_#{$num} {
+                background-image: url('../images/card_#{$num}.jpg');
+            }
         }
     }
 
