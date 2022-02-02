@@ -203,6 +203,9 @@ body {
     }
 
     &__author {
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 0.8px;
         color: $light-blue;
         margin-bottom: 6px;
 
@@ -214,13 +217,6 @@ body {
             font-size: 12px;
             line-height: 18px;
         }
-    }
-
-    &__author,
-    &__btn {
-        font-size: 13px;
-        line-height: 20px;
-        letter-spacing: 0.8px;
     }
   
     &__title {
@@ -261,6 +257,11 @@ body {
 }
 
 .button {
+    $root: &;
+
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.8px;
     border: none;
     padding: 9px 35px 11px;
     background-color: $light-blue;
@@ -272,10 +273,15 @@ body {
     &:hover {
         opacity: 0.6;
     }
+    &_clr-black & {
+        background-color: $black;
+        color: $white;
+        border: 2px solid $light-blue;
+    }
 
-    // #{$root}__item_clr-blue & { // если на item висит модификатор clr-blue, то меняем цвет фона у category
-    //     background-color: $dark-blue;
-    // }
+    #{$root}_clr-blue & { // если на item висит модификатор clr-blue, то меняем цвет фона у category
+        background-color: $dark-blue;
+     }
 
     @include breakpoint-sm {
         padding: 9px 30px 11px;
@@ -313,6 +319,10 @@ body {
         line-height: 30px;
         letter-spacing: 1.2px;
         margin-bottom: 10px;
+    }
+    &__btn {
+        display: flex;
+        column-gap: 16px;
     }
     &__image {
         text-align: center;

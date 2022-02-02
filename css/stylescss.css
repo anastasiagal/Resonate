@@ -228,6 +228,9 @@ body {
 }
 
 .card__author {
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.8px;
   color: #00B6DD;
   margin-bottom: 6px;
 }
@@ -241,12 +244,6 @@ body {
     font-size: 12px;
     line-height: 18px;
   }
-}
-
-.card__author, .card__btn {
-  font-size: 13px;
-  line-height: 20px;
-  letter-spacing: 0.8px;
 }
 
 .card__title {
@@ -294,6 +291,9 @@ body {
 }
 
 .button {
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.8px;
   border: none;
   padding: 9px 35px 11px;
   background-color: #00B6DD;
@@ -307,6 +307,16 @@ body {
 
 .button:hover {
   opacity: 0.6;
+}
+
+.button_clr-black .button {
+  background-color: #010101;
+  color: #fff;
+  border: 2px solid #00B6DD;
+}
+
+.button_clr-blue .button {
+  background-color: #081580;
 }
 
 @media screen and (max-width: 922px) {
@@ -358,6 +368,14 @@ body {
   line-height: 30px;
   letter-spacing: 1.2px;
   margin-bottom: 10px;
+}
+
+.hubspot__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
 }
 
 .hubspot__image {
