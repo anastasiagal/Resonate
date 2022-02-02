@@ -1,0 +1,60 @@
+.hero {
+    @include background-mixin;
+    
+    background-color: $black;
+    background-image: linear-gradient($black-rgba, $black-rgba), url('../images/hero-bg.jpg');
+    position: relative;
+    width: 100%;
+    padding: 120px 0 140px;
+
+    @include breakpoint-md {
+        padding: 100px 0 120px;
+    }
+
+    @include breakpoint-sm {
+        padding: 80px 0 100px;
+    }
+
+    @include breakpoint-xs {
+        padding: 60px 0 80px;
+    }
+
+    @include breakpoint-xxs {
+        padding-bottom: 70px; 
+    }
+
+    &__title {
+        @include fonts-title;
+
+        margin: 0 auto;
+        text-align: center;
+        color: $white;
+        max-width: 730px;
+
+        @include breakpoint-md {
+            @include fonts-title-md;
+
+            max-width: 630px;
+        }
+
+        @include breakpoint-sm {
+            @include fonts-title-sm;
+            @include fonts-subtitle-sm;
+
+            max-width: 450px;
+        }
+
+        @include breakpoint-xxs {
+            max-width: 285px;
+        }
+    }
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+
+    @include breakpoint-sm {
+        margin: 0 15px;
+    }
+}

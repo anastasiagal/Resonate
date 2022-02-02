@@ -1,0 +1,59 @@
+.imageText {
+    background-color: $black;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px 0;
+
+        @include breakpoint-md {
+            padding: 80px 16px;
+        }
+    }
+    &__content {
+        max-width: 50%;
+        margin-right: 55px;
+    }
+    &__title {
+        @include fonts-title;
+        
+        color: $light-blue;
+        margin-bottom: 22px;
+
+        @include breakpoint-md {
+            @include fonts-title-md;
+        }
+
+        @include breakpoint-sm {
+            @include fonts-title-sm;
+
+            margin-right: 25px;
+        }
+    }
+    &__text {
+        @include fonts(22px, 30px, 1.2px);
+
+        color: $white;
+        margin-bottom: 10px;
+
+        @include breakpoint-md {
+            @include fonts-subtitle-md;
+        }
+
+        @include breakpoint-sm {
+            @include fonts-subtitle-sm;
+
+        }
+    }
+    &__btn {
+        display: flex;
+        column-gap: 16px;
+    }
+    &__image {
+        text-align: center;
+    }
+    &__image-hub {
+        max-width: 100%;
+    }
+}
