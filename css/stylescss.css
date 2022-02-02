@@ -331,11 +331,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 100px 0;
 }
 
 .hubspot__content {
-  margin-right: 97px;
+  max-width: 555px;
 }
 
 .hubspot__title {
@@ -344,7 +350,6 @@ body {
   line-height: 68px;
   letter-spacing: 1.4px;
   margin-bottom: 22px;
-  max-width: 555px;
 }
 
 .hubspot__text {
@@ -352,14 +357,14 @@ body {
   color: #fff;
   line-height: 30px;
   letter-spacing: 1.2px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
-.hubspot__photo {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("../images/photo.jpg");
-  background-size: 100%;
-  width: 100%;
+.hubspot__image {
+  text-align: center;
+}
+
+.hubspot__image-hub {
+  max-width: 100%;
 }
 /*# sourceMappingURL=stylescss.css.map */
