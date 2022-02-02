@@ -256,9 +256,13 @@ body {
     }
 }
 
-.button {
-    $root: &;
+.buttons {
+    display: flex;
+    margin-top: 30px;
+    column-gap: 16px
+}
 
+.button {
     font-size: 13px;
     line-height: 20px;
     letter-spacing: 0.8px;
@@ -266,20 +270,19 @@ body {
     padding: 9px 35px 11px;
     background-color: $light-blue;
     color: $white;
-    margin-top: 30px;
     cursor: pointer;
     transition: opacity 0.4s ease-out;
     opacity: 1.0;
     &:hover {
         opacity: 0.6;
     }
-    &_clr-black & {
+    &_clr-black {
         background-color: $black;
         color: $white;
         border: 2px solid $light-blue;
     }
 
-    #{$root}_clr-blue & { // если на item висит модификатор clr-blue, то меняем цвет фона у category
+    &_clr-blue {
         background-color: $dark-blue;
      }
 
@@ -294,7 +297,7 @@ body {
     }
 }
 
-.hubspot {
+.imageText {
     background-color: $black;
 
     &__inner {
@@ -331,3 +334,4 @@ body {
         max-width: 100%;
     }
 }
+

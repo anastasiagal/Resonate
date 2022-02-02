@@ -290,6 +290,15 @@ body {
   }
 }
 
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+}
+
 .button {
   font-size: 13px;
   line-height: 20px;
@@ -298,7 +307,6 @@ body {
   padding: 9px 35px 11px;
   background-color: #00B6DD;
   color: #fff;
-  margin-top: 30px;
   cursor: pointer;
   -webkit-transition: opacity 0.4s ease-out;
   transition: opacity 0.4s ease-out;
@@ -309,13 +317,13 @@ body {
   opacity: 0.6;
 }
 
-.button_clr-black .button {
+.button_clr-black {
   background-color: #010101;
   color: #fff;
   border: 2px solid #00B6DD;
 }
 
-.button_clr-blue .button {
+.button_clr-blue {
   background-color: #081580;
 }
 
@@ -333,11 +341,11 @@ body {
   }
 }
 
-.hubspot {
+.imageText {
   background-color: #010101;
 }
 
-.hubspot__inner {
+.imageText__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -350,11 +358,11 @@ body {
   padding: 100px 0;
 }
 
-.hubspot__content {
+.imageText__content {
   max-width: 555px;
 }
 
-.hubspot__title {
+.imageText__title {
   font-size: 62px;
   color: #00B6DD;
   line-height: 68px;
@@ -362,7 +370,7 @@ body {
   margin-bottom: 22px;
 }
 
-.hubspot__text {
+.imageText__text {
   font-size: 22px;
   color: #fff;
   line-height: 30px;
@@ -370,7 +378,7 @@ body {
   margin-bottom: 10px;
 }
 
-.hubspot__btn {
+.imageText__btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -378,11 +386,11 @@ body {
           column-gap: 16px;
 }
 
-.hubspot__image {
+.imageText__image {
   text-align: center;
 }
 
-.hubspot__image-hub {
+.imageText__image-hub {
   max-width: 100%;
 }
 /*# sourceMappingURL=stylescss.css.map */
