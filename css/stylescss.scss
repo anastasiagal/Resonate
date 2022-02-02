@@ -17,6 +17,37 @@ $grey: #D3D8E4;
     letter-spacing: $spacing;
 }
 
+@mixin fonts-title {
+    font-size: 62px;
+    line-height: 68px;
+    letter-spacing: 1.4px;
+}
+
+@mixin fonts-title-md {
+    font-size: 54px;
+    line-height: 60px;
+    letter-spacing: 1.2px;
+}
+
+@mixin fonts-title-sm {
+    font-size: 46px;
+    line-height: 48px;
+    letter-spacing: 1px;
+}
+
+@mixin fonts-subtitle-md {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 1.2px;
+}
+
+@mixin fonts-subtitle-sm {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 1px;
+}
+
+
 @mixin breakpoint-md {
     @media screen and (max-width: 1200px){
         @content;
@@ -75,7 +106,7 @@ body {
     }
 
     &__title {
-        @include fonts(62px, 68px, 1.4px);
+        @include fonts-title;
 
         margin: 0 auto;
         text-align: center;
@@ -83,13 +114,14 @@ body {
         max-width: 730px;
 
         @include breakpoint-md {
-            @include fonts(54px, 60px, 1.2px);
+            @include fonts-title-md;
 
             max-width: 630px;
         }
 
         @include breakpoint-sm {
-            @include fonts(46px, 48px,1px);
+            @include fonts-title-sm;
+            @include fonts-subtitle-sm;
 
             max-width: 450px;
         }
@@ -222,8 +254,12 @@ body {
         font-weight: 400;
         margin-bottom: 16px;
 
+        @include breakpoint-md {
+            @include fonts-subtitle-md;
+        }
+
         @include breakpoint-sm {
-            @include fonts(20px, 28px, inherit);
+            @include fonts-subtitle-sm;
         }
 
         @include breakpoint-xs {
@@ -294,21 +330,45 @@ body {
         justify-content: space-between;
         align-items: center;
         padding: 100px 0;
+
+        @include breakpoint-md {
+            padding: 80px 16px;
+        }
     }
     &__content {
-        max-width: 555px;
+        max-width: 50%;
+        margin-right: 55px;
     }
     &__title {
-        @include fonts(62px, 68px, 1.4px);
+        @include fonts-title;
         
         color: $light-blue;
         margin-bottom: 22px;
+
+        @include breakpoint-md {
+            @include fonts-title-md;
+        }
+
+        @include breakpoint-sm {
+            @include fonts-title-sm;
+
+            margin-right: 25px;
+        }
     }
     &__text {
         @include fonts(22px, 30px, 1.2px);
 
         color: $white;
         margin-bottom: 10px;
+
+        @include breakpoint-md {
+            @include fonts-subtitle-md;
+        }
+
+        @include breakpoint-sm {
+            @include fonts-subtitle-sm;
+
+        }
     }
     &__btn {
         display: flex;

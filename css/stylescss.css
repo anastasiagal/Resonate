@@ -66,6 +66,9 @@ body {
     font-size: 46px;
     line-height: 48px;
     letter-spacing: 1px;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 1px;
     max-width: 450px;
   }
 }
@@ -255,11 +258,19 @@ body {
   margin-bottom: 16px;
 }
 
-@media screen and (max-width: 922px) {
+@media screen and (max-width: 1200px) {
   .card__title {
     font-size: 20px;
     line-height: 28px;
-    letter-spacing: inherit;
+    letter-spacing: 1.2px;
+  }
+}
+
+@media screen and (max-width: 922px) {
+  .card__title {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 1px;
   }
 }
 
@@ -361,8 +372,15 @@ body {
   padding: 100px 0;
 }
 
+@media screen and (max-width: 1200px) {
+  .imageText__inner {
+    padding: 80px 16px;
+  }
+}
+
 .imageText__content {
-  max-width: 555px;
+  max-width: 50%;
+  margin-right: 55px;
 }
 
 .imageText__title {
@@ -373,12 +391,45 @@ body {
   margin-bottom: 22px;
 }
 
+@media screen and (max-width: 1200px) {
+  .imageText__title {
+    font-size: 54px;
+    line-height: 60px;
+    letter-spacing: 1.2px;
+  }
+}
+
+@media screen and (max-width: 922px) {
+  .imageText__title {
+    font-size: 46px;
+    line-height: 48px;
+    letter-spacing: 1px;
+    margin-right: 25px;
+  }
+}
+
 .imageText__text {
   font-size: 22px;
   line-height: 30px;
   letter-spacing: 1.2px;
   color: #fff;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .imageText__text {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 1.2px;
+  }
+}
+
+@media screen and (max-width: 922px) {
+  .imageText__text {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 1px;
+  }
 }
 
 .imageText__btn {
