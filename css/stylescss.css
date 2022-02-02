@@ -9,10 +9,10 @@ body {
 .hero {
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   background-color: #010101;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(1, 1, 1, 0.6)), to(rgba(1, 1, 1, 0.6))), url("../images/hero-bg.jpg");
   background-image: linear-gradient(rgba(1, 1, 1, 0.6), rgba(1, 1, 1, 0.6)), url("../images/hero-bg.jpg");
-  background-size: cover;
   position: relative;
   width: 100%;
   padding: 120px 0 140px;
@@ -43,12 +43,12 @@ body {
 }
 
 .hero__title {
-  margin: 0 auto;
-  text-align: center;
-  color: #fff;
   font-size: 62px;
   line-height: 68px;
   letter-spacing: 1.4px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
   max-width: 730px;
 }
 
@@ -159,12 +159,12 @@ body {
 }
 
 .card__category {
-  position: absolute;
-  top: 12px;
-  left: 0;
   font-size: 13px;
   line-height: 22px;
   letter-spacing: 1.2px;
+  position: absolute;
+  top: 12px;
+  left: 0;
   text-transform: uppercase;
   padding: 6px 15px 8px 16px;
   background-color: #00B6DD;
@@ -186,9 +186,9 @@ body {
 .card__img {
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   height: 170px;
   margin-bottom: 20px;
-  background-size: cover;
 }
 
 @media screen and (max-width: 768px) {
@@ -243,6 +243,7 @@ body {
   .card__author {
     font-size: 12px;
     line-height: 18px;
+    letter-spacing: inherit;
   }
 }
 
@@ -258,6 +259,7 @@ body {
   .card__title {
     font-size: 20px;
     line-height: 28px;
+    letter-spacing: inherit;
   }
 }
 
@@ -335,9 +337,10 @@ body {
 
 @media screen and (max-width: 768px) {
   .button {
-    padding: 8px 28px 10px;
     font-size: 12px;
     line-height: 18px;
+    letter-spacing: inherit;
+    padding: 8px 28px 10px;
   }
 }
 
@@ -364,17 +367,17 @@ body {
 
 .imageText__title {
   font-size: 62px;
-  color: #00B6DD;
   line-height: 68px;
   letter-spacing: 1.4px;
+  color: #00B6DD;
   margin-bottom: 22px;
 }
 
 .imageText__text {
   font-size: 22px;
-  color: #fff;
   line-height: 30px;
   letter-spacing: 1.2px;
+  color: #fff;
   margin-bottom: 10px;
 }
 

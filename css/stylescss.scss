@@ -8,6 +8,13 @@ $grey: #D3D8E4;
 @mixin background-mixin {
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+}
+
+@mixin fonts($size, $height, $spacing) {
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: $spacing;
 }
 
 @mixin breakpoint-md {
@@ -47,7 +54,6 @@ body {
     
     background-color: $black;
     background-image: linear-gradient($black-rgba, $black-rgba), url('../images/hero-bg.jpg');
-    background-size: cover;
     position: relative;
     width: 100%;
     padding: 120px 0 140px;
@@ -69,25 +75,22 @@ body {
     }
 
     &__title {
+        @include fonts(62px, 68px, 1.4px);
+
         margin: 0 auto;
         text-align: center;
         color: $white;
-        font-size: 62px;
-        line-height: 68px;
-        letter-spacing: 1.4px;
         max-width: 730px;
 
         @include breakpoint-md {
-            font-size: 54px;
-            line-height: 60px;
-            letter-spacing: 1.2px;
+            @include fonts(54px, 60px, 1.2px);
+
             max-width: 630px;
         }
 
         @include breakpoint-sm {
-            font-size: 46px;
-            line-height: 48px;
-            letter-spacing: 1px;
+            @include fonts(46px, 48px,1px);
+
             max-width: 450px;
         }
 
@@ -156,12 +159,11 @@ body {
     }
 
     &__category {
+        @include fonts(13px, 22px, 1.2px);
+
         position: absolute;
         top: 12px;
         left: 0;
-        font-size: 13px;
-        line-height: 22px;
-        letter-spacing: 1.2px;
         text-transform: uppercase;
         padding: 6px 15px 8px 16px;
         background-color: $light-blue;
@@ -172,9 +174,7 @@ body {
         }
 
         @include breakpoint-xs {
-            font-size: 12px;
-            line-height: 20px;
-            letter-spacing: 1px;
+            @include fonts(12px, 20px, 1px);
         }
     }
 
@@ -183,7 +183,6 @@ body {
 
         height: 170px;
         margin-bottom: 20px;
-        background-size: cover;
 
         @include breakpoint-xs {
             margin-bottom: 18px;
@@ -203,9 +202,8 @@ body {
     }
 
     &__author {
-        font-size: 13px;
-        line-height: 20px;
-        letter-spacing: 0.8px;
+        @include fonts(13px, 20px, 0.8px);
+
         color: $light-blue;
         margin-bottom: 6px;
 
@@ -214,27 +212,23 @@ body {
         }
 
         @include breakpoint-xs {
-            font-size: 12px;
-            line-height: 18px;
+            @include fonts(12px, 18px, inherit);
         }
     }
   
     &__title {
-        font-size: 22px;
-        line-height: 30px;
-        letter-spacing: 1.2px;
+        @include fonts(22px, 30px, 1.2px);
+ 
         font-weight: 400;
         margin-bottom: 16px;
 
         @include breakpoint-sm {
-            font-size: 20px;
-            line-height: 28px;
+            @include fonts(20px, 28px, inherit);
         }
 
         @include breakpoint-xs {
-            font-size: 18px;
-            line-height: 26px;
-            letter-spacing: 1px;
+            @include fonts(18px, 26px, 1px);
+
             margin-bottom: 12px;
         }
 
@@ -244,14 +238,10 @@ body {
     }
 
     &__text {
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: 0.8px;
+        @include fonts(16px, 26px, 0.8px);
 
         @include breakpoint-xs {
-            font-size: 14px;
-            line-height: 22px;
-            letter-spacing: 0.6px;
+            @include fonts(14px, 22px, 0.6px);
         }
     }
 }
@@ -259,13 +249,12 @@ body {
 .buttons {
     display: flex;
     margin-top: 30px;
-    column-gap: 16px
+    column-gap: 16px;
 }
 
 .button {
-    font-size: 13px;
-    line-height: 20px;
-    letter-spacing: 0.8px;
+    @include fonts(13px, 20px, 0.8px);
+    
     border: none;
     padding: 9px 35px 11px;
     background-color: $light-blue;
@@ -291,9 +280,9 @@ body {
     }
 
     @include breakpoint-xs {
+        @include fonts(12px, 18px, inherit);
+
         padding: 8px 28px 10px; 
-        font-size: 12px;
-        line-height: 18px;
     }
 }
 
@@ -310,17 +299,15 @@ body {
         max-width: 555px;
     }
     &__title {
-        font-size: 62px;
+        @include fonts(62px, 68px, 1.4px);
+        
         color: $light-blue;
-        line-height: 68px;
-        letter-spacing: 1.4px;
         margin-bottom: 22px;
     }
     &__text {
-        font-size: 22px;
+        @include fonts(22px, 30px, 1.2px);
+
         color: $white;
-        line-height: 30px;
-        letter-spacing: 1.2px;
         margin-bottom: 10px;
     }
     &__btn {
