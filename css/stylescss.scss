@@ -8,7 +8,6 @@ $grey: #D3D8E4;
 @mixin background-mixin {
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
 }
 
 @mixin breakpoint-md {
@@ -48,6 +47,7 @@ body {
     
     background-color: $black;
     background-image: linear-gradient($black-rgba, $black-rgba), url('../images/hero-bg.jpg');
+    background-size: cover;
     position: relative;
     width: 100%;
     padding: 120px 0 140px;
@@ -182,10 +182,8 @@ body {
         @include background-mixin;
 
         height: 170px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
         margin-bottom: 20px;
+        background-size: cover;
 
         @include breakpoint-xs {
             margin-bottom: 18px;
@@ -260,32 +258,66 @@ body {
             letter-spacing: 0.6px;
         }
     }
+}
 
-    &__btn {
-        border: none;
-        padding: 9px 35px 11px;
-        background-color: $light-blue;
+.button {
+    border: none;
+    padding: 9px 35px 11px;
+    background-color: $light-blue;
+    color: $white;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: opacity 0.4s ease-out;
+    opacity: 1.0;
+    &:hover {
+        opacity: 0.6;
+    }
+
+    // #{$root}__item_clr-blue & { // если на item висит модификатор clr-blue, то меняем цвет фона у category
+    //     background-color: $dark-blue;
+    // }
+
+    @include breakpoint-sm {
+        padding: 9px 30px 11px;
+    }
+
+    @include breakpoint-xs {
+        padding: 8px 28px 10px; 
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+.hubspot {
+    background-color: $black;
+
+    &__inner {
+        display: flex;
+        padding: 100px 0;
+    }
+    &__content {
+        margin-right: 97px;
+    }
+    &__title {
+        font-size: 62px;
+        color: $light-blue;
+        line-height: 68px;
+        letter-spacing: 1.4px;
+        margin-bottom: 22px;
+        max-width: 555px;
+    }
+    &__text {
+        font-size: 22px;
         color: $white;
-        margin-top: 30px;
-        cursor: pointer;
-        transition: opacity 0.4s ease-out;
-        opacity: 1.0;
-        &:hover {
-            opacity: 0.6;
-        }
+        line-height: 30px;
+        letter-spacing: 1.2px;
+        margin-bottom: 40px;
+    }
+    &__photo {
+        @include background-mixin;
 
-        #{$root}__item_clr-blue & { // если на item висит модификатор clr-blue, то меняем цвет фона у category
-            background-color: $dark-blue;
-        }
-
-        @include breakpoint-sm {
-            padding: 9px 30px 11px;
-        }
-
-        @include breakpoint-xs {
-            padding: 8px 28px 10px; 
-            font-size: 12px;
-            line-height: 18px;
-        }
+        background-image: url('../images/photo.jpg');
+        background-size: 100%;
+        width: 100%;
     }
 }
