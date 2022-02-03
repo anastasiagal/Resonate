@@ -301,7 +301,6 @@
   letter-spacing: 0.8px;
   border: 2px solid transparent;
   padding: 7px 33px 9px;
-  background-color: #00B6DD;
   color: #fff;
   cursor: pointer;
   -webkit-transition: opacity 0.4s ease-out;
@@ -319,6 +318,12 @@
 
 .button_clr-blue {
   background-color: #081580;
+  border-color: inherit;
+}
+
+.button_clr-light-blue {
+  background-color: #00B6DD;
+  border-color: #00B6DD;
 }
 
 @media screen and (max-width: 922px) {
