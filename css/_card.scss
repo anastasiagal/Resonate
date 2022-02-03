@@ -106,22 +106,12 @@
     }
   
     &__title {
-        @include fonts(22px, 30px, 1.2px);
+        @include fonts-subtitle;
  
         font-weight: 400;
         margin-bottom: 16px;
 
-        @include breakpoint-md {
-            @include fonts-subtitle-md;
-        }
-
-        @include breakpoint-sm {
-            @include fonts-subtitle-sm;
-        }
-
         @include breakpoint-xs {
-            @include fonts(18px, 26px, 1px);
-
             margin-bottom: 12px;
         }
 

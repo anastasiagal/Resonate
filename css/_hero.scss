@@ -32,15 +32,10 @@
         max-width: 730px;
 
         @include breakpoint-md {
-            @include fonts-title-md;
-
             max-width: 630px;
         }
 
         @include breakpoint-sm {
-            @include fonts-title-sm;
-            @include fonts-subtitle-sm;
-
             max-width: 450px;
         }
 

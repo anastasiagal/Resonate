@@ -17,7 +17,6 @@
     }
     &__content {
         max-width: 50%;
-        // margin-right: 55px;
 
         @include breakpoint-sm {
             max-width: 47%;
@@ -33,28 +32,14 @@
         
         color: $light-blue;
         margin-bottom: 22px;
-
-        @include breakpoint-md {
-            @include fonts-title-md;
-        }
-
-        @include breakpoint-sm {
-            @include fonts-title-sm;
-        }
     }
     &__text {
-        @include fonts(22px, 30px, 1.2px);
+        @include fonts-subtitle;
 
         color: $white;
         margin-bottom: 10px;
 
-        @include breakpoint-md {
-            @include fonts-subtitle-md;
-        }
-
         @include breakpoint-sm {
-            @include fonts-subtitle-sm;
-
             margin-bottom: 0;
         }
     }

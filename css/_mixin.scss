@@ -11,36 +11,30 @@
 }
 
 @mixin fonts-title {
-    font-size: 62px;
-    line-height: 68px;
-    letter-spacing: 1.4px;
+    @include fonts(62px, 68px, 1.4px);
+
+    @include breakpoint-md {
+        @include fonts(54px, 60px, 1.2px);
+    }
+
+    @include breakpoint-sm {
+        @include fonts(46px, 48px, 1px);
+    }
 }
 
-@mixin fonts-title-md {
-    font-size: 54px;
-    line-height: 60px;
-    letter-spacing: 1.2px;
+@mixin fonts-subtitle {
+    @include fonts(22px, 30px, 1.2px);
+
+    @include breakpoint-md {
+        @include fonts(20px, 28px, 1.2px);
+    }
+
+    @include breakpoint-sm {
+        @include fonts(18px, 26px, 1px);
+    }
 }
 
-@mixin fonts-title-sm {
-    font-size: 46px;
-    line-height: 48px;
-    letter-spacing: 1px;
-}
-
-@mixin fonts-subtitle-md {
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: 1.2px;
-}
-
-@mixin fonts-subtitle-sm {
-    font-size: 18px;
-    line-height: 26px;
-    letter-spacing: 1px;
-}
-
-
+/*Responsive*/
 @mixin breakpoint-md {
     @media screen and (max-width: 1200px){
         @content;
@@ -48,7 +42,7 @@
 }
 
 @mixin breakpoint-sm {
-    @media screen and (max-width: 922px) {
+    @media screen and (max-width: 992px) {
         @content;
     }
 }
