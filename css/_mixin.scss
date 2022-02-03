@@ -1,0 +1,66 @@
+@mixin background-mixin {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin fonts($size, $height, $spacing) {
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: $spacing;
+}
+
+@mixin fonts-title {
+    font-size: 62px;
+    line-height: 68px;
+    letter-spacing: 1.4px;
+}
+
+@mixin fonts-title-md {
+    font-size: 54px;
+    line-height: 60px;
+    letter-spacing: 1.2px;
+}
+
+@mixin fonts-title-sm {
+    font-size: 46px;
+    line-height: 48px;
+    letter-spacing: 1px;
+}
+
+@mixin fonts-subtitle-md {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 1.2px;
+}
+
+@mixin fonts-subtitle-sm {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 1px;
+}
+
+
+@mixin breakpoint-md {
+    @media screen and (max-width: 1200px){
+        @content;
+    }
+}
+
+@mixin breakpoint-sm {
+    @media screen and (max-width: 922px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-xs {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-xxs {
+    @media screen and (max-width: 576px) {
+        @content;
+    }
+}

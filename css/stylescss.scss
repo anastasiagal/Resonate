@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import 'mixin';
 
 $white: #fff;
 $dark-blue: #081580;
@@ -6,73 +7,6 @@ $light-blue: #00B6DD;
 $black: #010101;
 $black-rgba: rgba(1, 1, 1, 0.6);
 $grey: #D3D8E4;
-
-@mixin background-mixin {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-@mixin fonts($size, $height, $spacing) {
-    font-size: $size;
-    line-height: $height;
-    letter-spacing: $spacing;
-}
-
-@mixin fonts-title {
-    font-size: 62px;
-    line-height: 68px;
-    letter-spacing: 1.4px;
-}
-
-@mixin fonts-title-md {
-    font-size: 54px;
-    line-height: 60px;
-    letter-spacing: 1.2px;
-}
-
-@mixin fonts-title-sm {
-    font-size: 46px;
-    line-height: 48px;
-    letter-spacing: 1px;
-}
-
-@mixin fonts-subtitle-md {
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: 1.2px;
-}
-
-@mixin fonts-subtitle-sm {
-    font-size: 18px;
-    line-height: 26px;
-    letter-spacing: 1px;
-}
-
-
-@mixin breakpoint-md {
-    @media screen and (max-width: 1200px){
-        @content;
-    }
-}
-
-@mixin breakpoint-sm {
-    @media screen and (max-width: 922px) {
-        @content;
-    }
-}
-
-@mixin breakpoint-xs {
-    @media screen and (max-width: 768px) {
-        @content;
-    }
-}
-
-@mixin breakpoint-xxs {
-    @media screen and (max-width: 576px) {
-        @content;
-    }
-}
 
 @import 'hero';
 @import 'card';
@@ -86,6 +20,3 @@ html {
 body {
     color: $black;
 }
-
-
-
