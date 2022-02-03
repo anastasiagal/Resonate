@@ -1,6 +1,4 @@
-@import 'hero';
-@import 'card';
-@import 'imageText';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
 $white: #fff;
 $dark-blue: #081580;
@@ -76,46 +74,17 @@ $grey: #D3D8E4;
     }
 }
 
+@import 'hero';
+@import 'card';
+@import 'button';
+@import 'imageText';
+
 html {
     font-family: 'Noto Sans', sans-serif;
 }
 
 body {
     color: $black;
-}
-
-.button {
-    @include fonts(13px, 20px, 0.8px);
-    
-    border: none;
-    padding: 9px 35px 11px;
-    background-color: $light-blue;
-    color: $white;
-    cursor: pointer;
-    transition: opacity 0.4s ease-out;
-    opacity: 1.0;
-    &:hover {
-        opacity: 0.6;
-    }
-    &_clr-black {
-        background-color: $black;
-        color: $white;
-        border: 2px solid $light-blue;
-    }
-
-    &_clr-blue {
-        background-color: $dark-blue;
-     }
-
-    @include breakpoint-sm {
-        padding: 9px 30px 11px;
-    }
-
-    @include breakpoint-xs {
-        @include fonts(12px, 18px, inherit);
-
-        padding: 8px 28px 10px; 
-    }
 }
 
 

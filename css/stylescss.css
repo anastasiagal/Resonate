@@ -1,11 +1,4 @@
-html {
-  font-family: 'Noto Sans', sans-serif;
-}
-
-body {
-  color: #010101;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 .hero {
   background-repeat: no-repeat;
   background-position: center;
@@ -76,17 +69,6 @@ body {
 @media screen and (max-width: 576px) {
   .hero__title {
     max-width: 285px;
-  }
-}
-
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 922px) {
-  .container {
-    margin: 0 15px;
   }
 }
 
@@ -304,26 +286,20 @@ body {
 }
 
 .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-top: 30px;
-  -webkit-column-gap: 16px;
-          column-gap: 16px;
 }
 
 .button {
   font-size: 13px;
   line-height: 20px;
   letter-spacing: 0.8px;
-  border: none;
-  padding: 9px 35px 11px;
+  border: 2px solid transparent;
+  padding: 7px 33px 9px;
   background-color: #00B6DD;
   color: #fff;
   cursor: pointer;
   -webkit-transition: opacity 0.4s ease-out;
   transition: opacity 0.4s ease-out;
-  opacity: 1.0;
 }
 
 .button:hover {
@@ -332,8 +308,7 @@ body {
 
 .button_clr-black {
   background-color: #010101;
-  color: #fff;
-  border: 2px solid #00B6DD;
+  border-color: #00B6DD;
 }
 
 .button_clr-blue {
@@ -363,9 +338,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -375,6 +349,13 @@ body {
 @media screen and (max-width: 1200px) {
   .imageText__inner {
     padding: 80px 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .imageText__inner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -446,5 +427,13 @@ body {
 
 .imageText__image-hub {
   max-width: 100%;
+}
+
+html {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+  color: #010101;
 }
 /*# sourceMappingURL=stylescss.css.map */
