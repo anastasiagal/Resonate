@@ -4,10 +4,14 @@
     column-gap: 16px;
     row-gap: 16px;
 
-    @include breakpoint-xxs {
+    @include breakpoint-xs {
         &_imageText {
             justify-content: center;
             flex-wrap: wrap;
+        }
+    }
+    @include breakpoint-xxs {
+        &_imageText {
             flex-direction: column;
         }
     }

@@ -300,13 +300,18 @@
   row-gap: 16px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .buttons_imageText {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .buttons_imageText {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -382,7 +387,7 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .imageText__inner {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -396,7 +401,7 @@
   margin-right: 55px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .imageText__content {
     max-width: 90%;
     text-align: center;
@@ -462,7 +467,7 @@
   max-width: 100%;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .imageText__image-hub {
     margin-top: 40px;
   }
