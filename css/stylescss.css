@@ -180,8 +180,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 170px;
   margin-bottom: 20px;
+}
+
+.card__img::before {
+  position: static;
+  display: block;
+  content: "";
+  padding: 61% 0 0;
 }
 
 @media screen and (max-width: 768px) {
