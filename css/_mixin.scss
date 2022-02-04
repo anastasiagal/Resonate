@@ -11,20 +11,19 @@
 }
 
 $breakpoints: (
-    xs: '480px',
-    ssm: '576px',
-    sm: '768px',
-    md: '992px',
-    lg: '1200px',
-    xl: '1440px',
+    xxs: '576px',
+    xs: '768px',
+    sm: '992px',
+    md: '1200px',
 ); // размер окна браузера
-  
-  $container-width: (
-    md: 720px,
-    lg: 940px,
-    xl: 1140px,
-    xxl: 1400px,
-  ); // ширина контейнера (без учета строки - я про -15px)
+
+$container-width: (
+    xxs: 546px,
+    xs: 720px,
+    sm: 960px,
+    md: 1140px,
+); // ширина контейнера (без учета строки - я про -15px)
+
   
   $grid-gutter-width: 30px; // отсуп между колонками
   $grid-columns: 12; // количество колонок
@@ -100,38 +99,8 @@ $breakpoints: (
 }
 
 // media
-@mixin breakpoint-xl { // large desktop
-    @media (max-width: map-get($breakpoints, xl)) {
-      @content;
-    }
-  }
-  
-  @mixin breakpoint-xl-up {
-    @media (min-width: map-get($breakpoints, xl) + 1) {
-      @content;
-    }
-  }
-  
-  @mixin breakpoint-lg { // desktop
-    @media (max-width: map-get($breakpoints, lg)) {
-      @content;
-    }
-  }
-  
-  @mixin breakpoint-lg-up {
-    @media (min-width: map-get($breakpoints, lg) + 1) {
-      @content;
-    }
-  }
-  
   @mixin breakpoint-md { // tablet landscape
     @media (max-width: map-get($breakpoints, md)) {
-      @content;
-    }
-  }
-  
-  @mixin breakpoint-md-up {
-    @media (min-width: map-get($breakpoints, md) + 1) {
       @content;
     }
   }
@@ -142,53 +111,23 @@ $breakpoints: (
     }
   }
   
-  @mixin breakpoint-sm-nav { // tablet port + mobile landscape
-    @media (max-width: map-get($breakpoints, sm-nav)) {
-      @content;
-    }
-  }
-  
-  @mixin breakpoint-sm-up {
-    @media (min-width: map-get($breakpoints, sm) + 1) {
-      @content;
-    }
-  }
-  
-  @mixin breakpoint-ssm { // tablet port + mobile landscape
-    @media (max-width: map-get($breakpoints, ssm)) {
-      @content;
-    }
-  }
-  
-  @mixin breakpoint-ssm-up {
-    @media (min-width: map-get($breakpoints, ssm) + 1) {
-      @content;
-    }
-  }
-  
   @mixin breakpoint-xs { // mobile
     @media (max-width: map-get($breakpoints, xs)) {
       @content;
     }
   }
   
-  @mixin breakpoint-xs-up {
-    @media (min-width: map-get($breakpoints, xs) + 1) {
+  @mixin breakpoint-xxs { // mobile
+    @media (max-width: map-get($breakpoints, xxs)) {
       @content;
     }
   }
+
+  
   
   @mixin make-container { // ширина контейнера
     width: map-get($container-width, xxl) !important;
     margin: 0 auto !important;
-  
-    @include breakpoint-xl {
-      width: map-get($container-width, xl) !important;
-    }
-  
-    @include breakpoint-lg {
-      width: map-get($container-width, lg) !important;
-    }
   
     @include breakpoint-md {
       width: map-get($container-width, md) !important;
