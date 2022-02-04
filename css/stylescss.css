@@ -511,7 +511,7 @@ body {
 }
 
 .container {
-  width: !important;
+  width: 1140px !important;
   margin: 0 auto !important;
 }
 

@@ -126,7 +126,7 @@ $container-width: (
   
   
   @mixin make-container { // ширина контейнера
-    width: map-get($container-width, xxl) !important;
+    width: map-get($container-width, md) !important;
     margin: 0 auto !important;
   
     @include breakpoint-md {
