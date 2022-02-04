@@ -7,6 +7,8 @@
     @include breakpoint-xxs {
         &_imageText {
             justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
         }
     }
 }
