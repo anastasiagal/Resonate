@@ -10,6 +10,30 @@
     letter-spacing: $spacing;
 }
 
+@mixin fonts-title {
+    @include fonts(62px, 68px, 1.4px);
+
+    @include breakpoint-md {
+        @include fonts(54px, 60px, 1.2px);
+    }
+
+    @include breakpoint-sm {
+        @include fonts(46px, 48px, 1px);
+    }
+}
+
+@mixin fonts-subtitle {
+    @include fonts(22px, 30px, 1.2px);
+
+    @include breakpoint-md {
+        @include fonts(20px, 28px, 1.2px);
+    }
+
+    @include breakpoint-sm {
+        @include fonts(18px, 26px, 1px);
+    }
+}
+
 $breakpoints: (
     xxs: '576px',
     xs: '768px',
@@ -47,56 +71,7 @@ $container-width: (
     flex: 0 0 percentage($size / $columns); 
     max-width: percentage($size / $columns);
   }
-
-
-@mixin fonts-title {
-    @include fonts(62px, 68px, 1.4px);
-
-    @include breakpoint-md {
-        @include fonts(54px, 60px, 1.2px);
-    }
-
-    @include breakpoint-sm {
-        @include fonts(46px, 48px, 1px);
-    }
-}
-
-@mixin fonts-subtitle {
-    @include fonts(22px, 30px, 1.2px);
-
-    @include breakpoint-md {
-        @include fonts(20px, 28px, 1.2px);
-    }
-
-    @include breakpoint-sm {
-        @include fonts(18px, 26px, 1px);
-    }
-}
-
-/*Responsive*/
-@mixin breakpoint-md {
-    @media screen and (max-width: 1200px){
-        @content;
-    }
-}
-
-@mixin breakpoint-sm {
-    @media screen and (max-width: 992px) {
-        @content;
-    }
-}
-
-@mixin breakpoint-xs {
-    @media screen and (max-width: 768px) {
-        @content;
-    }
-}
-
-@mixin breakpoint-xxs {
-    @media screen and (max-width: 576px) {
-        @content;
-    }
-}
+  
 
 // media
   @mixin breakpoint-md { // tablet landscape
@@ -128,12 +103,12 @@ $container-width: (
   @mixin make-container { // ширина контейнера
     width: map-get($container-width, md) !important;
     margin: 0 auto !important;
+
+    @include breakpoint-sm {
+        width: map-get($container-width, sm) !important;
+      }
   
-    @include breakpoint-md {
-      width: map-get($container-width, md) !important;
-    }
-  
-    @include breakpoint-sm { // встает на всю ширину окна, резиновый
+    @include breakpoint-xs { // встает на всю ширину окна, резиновый
       padding-left: $grid-gutter-width / 2 !important;
       padding-right: $grid-gutter-width / 2 !important;
       width: auto !important;
