@@ -35,7 +35,7 @@
         @include make-col(6);
       }
 
-      @include breakpoint-xxs {
+      @include breakpoint-xs {
         @include make-col(12);
       }
     }
@@ -53,7 +53,7 @@
             padding: 28px;
         }
 
-        @include breakpoint-xxs {
+        @include breakpoint-xs {
             padding: 16px;
         }
     }
@@ -89,11 +89,11 @@
 
         margin-bottom: 20px;
 
-        @include breakpoint-xs {
+        @include breakpoint-sm {
             margin-bottom: 18px;
         }
 
-        @include breakpoint-xxs {
+        @include breakpoint-xs {
             margin-bottom: 12px;
             &::before {
                 padding: 33% 0 0;
@@ -130,11 +130,11 @@
         font-weight: 400;
         margin-bottom: 16px;
 
-        @include breakpoint-xs {
+        @include breakpoint-sm {
             margin-bottom: 12px;
         }
 
-        @include breakpoint-xxs {
+        @include breakpoint-xs {
             margin-bottom: 10px;
         }
     }
