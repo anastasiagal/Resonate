@@ -35,17 +35,17 @@
 }
 
 $breakpoints: (
-    xxs: '576px',
-    xs: '768px',
-    sm: '992px',
-    md: '1200px',
+    xxs: 576px,
+    xs: 768px,
+    sm: 992px,
+    md: 1200px,
 ); // размер окна браузера
 
 $container-width: (
-    xxs: 546px,
-    xs: 720px,
-    sm: 960px,
-    md: 1140px,
+    xs: 546px,
+    sm: 720px,
+    md: 960px,
+    xl: 1140px,
 ); // ширина контейнера (без учета строки - я про -15px)
 
   
@@ -101,12 +101,15 @@ $container-width: (
   
   
   @mixin make-container { // ширина контейнера
-    width: map-get($container-width, md) !important;
+    width: map-get($container-width, xl) !important;
     margin: 0 auto !important;
 
+    @include breakpoint-md {
+        width: map-get($container-width, md) !important;
+      }
     @include breakpoint-sm {
         width: map-get($container-width, sm) !important;
-      }
+      }  
   
     @include breakpoint-xs { // встает на всю ширину окна, резиновый
       padding-left: $grid-gutter-width / 2 !important;
