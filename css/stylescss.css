@@ -178,8 +178,6 @@
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     max-width: 100%;
-    padding-top: 50px;
-    margin-bottom: 30px;
   }
 }
 
@@ -260,6 +258,9 @@
 @media (max-width: 576px) {
   .card__img {
     margin-bottom: 12px;
+  }
+  .card__img::before {
+    padding: 33% 0 0;
   }
 }
 
@@ -647,7 +648,7 @@ body {
 
 @media (max-width: 1200px) {
   .container {
-    width: 960px !important;
+    width: 950px !important;
   }
 }
 

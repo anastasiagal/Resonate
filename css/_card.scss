@@ -41,8 +41,6 @@
 
       @include breakpoint-xxs {
         @include make-col(12);
-        padding-top: 50px;
-        margin-bottom: 30px;
       }
     }
 
@@ -101,6 +99,9 @@
 
         @include breakpoint-xxs {
             margin-bottom: 12px;
+            &::before {
+                padding: 33% 0 0;
+            }
         }
 
         $nums: one, two, three, four, five, six;
