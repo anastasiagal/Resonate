@@ -31,11 +31,11 @@
         @include make-col-ready;
         @include make-col(4);
 
-        @include breakpoint-sm {
+        @include breakpoint-md {
         @include make-col(6);
       }
 
-      @include breakpoint-xs {
+      @include breakpoint-sm {
         @include make-col(6);
       }
 
@@ -88,7 +88,7 @@
             position: static;
             display: block;
             content: "";
-            padding: 61% 0 0;
+                padding: 57.09% 0 0;
         }
 
         margin-bottom: 20px;

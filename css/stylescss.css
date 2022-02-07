@@ -154,7 +154,7 @@
   max-width: 33.33333%;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .card__col {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
@@ -163,7 +163,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .card__col {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
@@ -246,7 +246,7 @@
   position: static;
   display: block;
   content: "";
-  padding: 61% 0 0;
+  padding: 57.09% 0 0;
 }
 
 @media (max-width: 767px) {
