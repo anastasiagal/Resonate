@@ -37,7 +37,7 @@
         }
     }
     &__content {
-        max-width: 50%;
+        // max-width: 50%;
         margin-right: 55px;
         &__col {
             @include make-col-ready;
@@ -85,7 +85,7 @@
           }     
     }
     &__image-hub {
-        max-width: 100%;
+        // max-width: 100%;
 
         @include breakpoint-xs {
             margin-top: 40px;

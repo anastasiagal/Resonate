@@ -166,6 +166,15 @@
 @media (max-width: 768px) {
   .card__col {
     -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .card__col {
+    -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     max-width: 100%;
@@ -498,7 +507,6 @@
 }
 
 .imageText__content {
-  max-width: 50%;
   margin-right: 55px;
 }
 
@@ -616,10 +624,6 @@
             flex: 0 0 100%;
     max-width: 100%;
   }
-}
-
-.imageText__image-hub {
-  max-width: 100%;
 }
 
 @media (max-width: 768px) {
