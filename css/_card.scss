@@ -1,7 +1,7 @@
 .card {
     $root: &; // ссылка на родителя (в данном случае card)
 
-    padding: 100px 15px 0;
+    padding-top: 100px;
     margin-bottom: 90px;
 
     @include breakpoint-md {
@@ -26,28 +26,24 @@
     }
   
     &__col {
-      @include make-col-ready;
-      @include make-col(4);
-      
-      @include breakpoint-sm {
+        margin-bottom: 30px;
+
+        @include make-col-ready;
+        @include make-col(4);
+
+        @include breakpoint-sm {
         @include make-col(6);
       }
 
       @include breakpoint-xs {
         @include make-col(12);
+        padding-top: 50px;
+        margin-bottom: 30px;
       }
     }
 
-    &__items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        column-gap: 30px;
-        row-gap: 30px;
-    }
-
     &__item {
-        max-width: 30%;
+        height: 100%;
         padding: 30px;
         border: 1px solid $grey;
         position: relative;
@@ -57,12 +53,10 @@
 
         @include breakpoint-sm {
             padding: 28px;
-            max-width: 45%;
         }
 
         @include breakpoint-xxs {
             padding: 16px;
-            max-width: 100%;
         }
     }
 
