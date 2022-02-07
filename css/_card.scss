@@ -20,11 +20,11 @@
     }
 
     &__row {
-      @include make-row;
-  
-      justify-content: center;
+        @include make-row;
+
+        justify-content: center;
     }
-  
+
     &__col {
         margin-bottom: 30px;
 
@@ -32,12 +32,12 @@
         @include make-col(4);
 
         @include breakpoint-md {
-        @include make-col(6);
-      }
+            @include make-col(6);
+        }
 
-      @include breakpoint-xs {
-        @include make-col(12);
-      }
+        @include breakpoint-xxs {
+            @include make-col(12);
+        }
     }
 
     &__item {
@@ -84,7 +84,7 @@
             position: static;
             display: block;
             content: "";
-                padding: 57.09% 0 0;
+            padding: 57.09% 0 0;
         }
 
         margin-bottom: 20px;
@@ -104,7 +104,7 @@
 
         @each $num in $nums {
             &_#{$num} {
-                background-image: url('../images/card_#{$num}.jpg');
+                background-image: url("../images/card_#{$num}.jpg");
             }
         }
     }
@@ -123,10 +123,10 @@
             @include fonts(12px, 18px, inherit);
         }
     }
-  
+
     &__title {
         @include fonts-subtitle;
- 
+
         font-weight: 400;
         margin-bottom: 16px;
 
