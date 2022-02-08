@@ -6,8 +6,11 @@
     &__row {
         @include make-row;
 
-        justify-content: center;
         align-items: center;
+        
+        @include breakpoint-xs {
+            justify-content: center;
+        }
     }
 
     &__col {

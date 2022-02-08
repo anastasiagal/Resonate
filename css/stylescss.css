@@ -440,12 +440,17 @@
       flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 767px) {
+  .imageText__row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .imageText__col {
