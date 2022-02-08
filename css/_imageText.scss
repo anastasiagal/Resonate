@@ -3,10 +3,7 @@
     padding: 100px 0;
 
     &__row {
-        @include make-row;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include make-row;   
     }
 
     &__col {
@@ -47,20 +44,8 @@
     }
 }
 
-    
-
-    // &__inner {
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: center;
-        // padding: 100px 0;
-
-        
-
-    
-
     &__content {
-        // justify-content: center;
+        justify-content: center;
     }
     &__title {
         @include fonts-title;
