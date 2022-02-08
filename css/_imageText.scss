@@ -1,14 +1,13 @@
 .imageText {
     background-color: $black;
     padding: 100px 0;
-    justify-content: space-between;
 
     &__row {
         @include make-row;
-
+        justify-content: space-between;
         align-items: center;
         
-        @include breakpoint-xs {
+        @include breakpoint-sm {
             justify-content: center;
         }
     }
@@ -42,7 +41,6 @@
 
     @include breakpoint-sm {
         flex-wrap: wrap;
-        justify-content: center;
     }
 
     @include breakpoint-xs {
