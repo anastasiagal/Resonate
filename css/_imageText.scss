@@ -1,29 +1,12 @@
 .imageText {
     background-color: $black;
+    padding: 100px 0;
+    justify-content: center;
 
     &__row {
         @include make-row;
-    }
 
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 100px 0;
-
-        @include breakpoint-md {
-            padding: 70px 0;
-        }
-
-        @include breakpoint-sm {
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        @include breakpoint-xs {
-            padding-top: 60px;
-            padding-bottom: 60px;
-        }
+        justify-content: center;
     }
 
     &__col {
@@ -49,12 +32,27 @@
         }
     }
 
+    @include breakpoint-md {
+        padding: 70px 0;
+    }
+
+    @include breakpoint-sm {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @include breakpoint-xs {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
     &__title {
         @include fonts-title;
 
         color: $light-blue;
         margin-bottom: 22px;
     }
+
     &__text {
         @include fonts-subtitle;
 
@@ -65,6 +63,7 @@
             margin-bottom: 0;
         }
     }
+
     &__image {
         @include breakpoint-sm {
             display: flex;
@@ -83,6 +82,7 @@
             }
         }
     }
+
     &__image-hub {
         @include breakpoint-sm {
             margin-top: 40px;
