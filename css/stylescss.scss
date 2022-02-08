@@ -7,11 +7,14 @@ $light-blue: #00B6DD;
 $black: #010101;
 $black-rgba: rgba(1, 1, 1, 0.6);
 $grey: #D3D8E4;
+$green: #CCD5AE;
+$bg: #F2F2F2;
 
 @import 'hero';
 @import 'card';
 @import 'button';
 @import 'imageText';
+@import 'location';
 
 html {
     font-family: 'Noto Sans', sans-serif;
