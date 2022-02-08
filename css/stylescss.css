@@ -646,6 +646,18 @@
   max-width: 33.33333%;
 }
 
+.location__col_secondary {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  max-width: 25%;
+}
+
 .location_clr-bg {
   background-color: #081580;
 }
@@ -669,6 +681,7 @@
   background-color: transparent;
   color: #fff;
   text-align: center;
+  padding: 0;
 }
 
 .location__title {
