@@ -621,6 +621,7 @@
 
 .location {
   padding: 100px 0;
+  background-color: #F2F2F2;
 }
 
 .location__items {
@@ -630,6 +631,19 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.location__title {
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+}
+
+.location__text {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.8px;
 }
 
 html {

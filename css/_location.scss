@@ -1,13 +1,18 @@
 .location {
     padding: 100px 0;
-    
+    background-color: $bg;
+
     &__items{
         display: flex;
         justify-content: space-between;
     }
+    &__title {
+        @include fonts(24px, 36px, 1.2px);
 
-    &__item {
-        
+        font-weight: 700;
+    }
+    &__text {
+        @include fonts(16px, 26px, 0.8px);
     }
 
 }
