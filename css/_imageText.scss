@@ -1,9 +1,29 @@
 .imageText {
     background-color: $black;
-    padding: 100px 0;
 
     &__row {
-        @include make-row;   
+        @include make-row;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px 0;
+
+        @include breakpoint-md {
+            padding: 70px 0;
+        }
+
+        @include breakpoint-sm {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @include breakpoint-xs {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
     }
 
     &__col {
@@ -29,24 +49,6 @@
         }
     }
 
-    @include breakpoint-md {
-        padding: 70px 0;
-    }
-
-    @include breakpoint-sm {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    @include breakpoint-xs {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-}
-
-    &__content {
-        justify-content: center;
-    }
     &__title {
         @include fonts-title;
 

@@ -426,7 +426,6 @@
 
 .imageText {
   background-color: #010101;
-  padding: 100px 0;
 }
 
 .imageText__row {
@@ -437,6 +436,11 @@
       flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+}
+
+.imageText__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -444,6 +448,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 100px 0;
 }
 
 @media (max-width: 1199px) {
