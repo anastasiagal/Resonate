@@ -660,12 +660,15 @@
 }
 
 .location__item {
+  height: 100%;
   background-color: #CCD5AE;
   padding: 30px 30px 40px;
 }
 
 .location__item_clr-dark {
   background-color: transparent;
+  color: #fff;
+  text-align: center;
 }
 
 .location__title {
@@ -673,6 +676,12 @@
   line-height: 36px;
   letter-spacing: 1.2px;
   font-weight: 700;
+}
+
+.location__title_size {
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: 1.2px;
 }
 
 .location__text {

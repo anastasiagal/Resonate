@@ -21,10 +21,13 @@
     }
 
     &__item {
+        height: 100%;
         background-color: $green;
         padding: 30px 30px 40px;
         &_clr-dark {
             background-color: transparent;
+            color: $white;
+            text-align: center;
         }
     }
 
@@ -32,6 +35,9 @@
         @include fonts(24px, 36px, 1.2px);
 
         font-weight: 700;
+        &_size {
+            @include fonts(22px, 30px, 1.2px);
+        }
     }
 
     &__text {
