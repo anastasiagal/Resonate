@@ -624,6 +624,10 @@
   background-color: #F2F2F2;
 }
 
+.location_clr-bg {
+  background-color: #081580;
+}
+
 .location__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -631,6 +635,15 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.location__item {
+  background-color: #CCD5AE;
+  padding: 30px 30px 40px;
+}
+
+.location__item_clr-dark {
+  background-color: transparent;
 }
 
 .location__title {

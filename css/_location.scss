@@ -1,18 +1,32 @@
 .location {
     padding: 100px 0;
     background-color: $bg;
+    &_clr-bg {
+        background-color: $dark-blue;
+    }
 
-    &__items{
+    &__items {
         display: flex;
         justify-content: space-between;
     }
+
+    &__item {
+        background-color: $green;
+        padding: 30px 30px 40px;
+        &_clr-dark {
+            background-color: transparent;
+        }
+    }
+
     &__title {
         @include fonts(24px, 36px, 1.2px);
 
         font-weight: 700;
     }
+
     &__text {
         @include fonts(16px, 26px, 0.8px);
     }
-
 }
+
+
