@@ -1,6 +1,16 @@
 .location {
     padding: 100px 0;
     background-color: $bg;
+
+    &__row {
+        @include make-row;
+    }
+
+    &__col {
+        @include make-col-ready;
+        @include make-col(4);
+    }
+
     &_clr-bg {
         background-color: $dark-blue;
     }
