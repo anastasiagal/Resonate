@@ -40,6 +40,8 @@
     &__title {
         @include fonts(24px, 36px, 1.2px);
 
+        margin-bottom: 10px;
+
         font-weight: 700;
         &_size {
             @include fonts(22px, 30px, 1.2px);
