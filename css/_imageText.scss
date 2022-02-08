@@ -1,12 +1,13 @@
 .imageText {
     background-color: $black;
     padding: 100px 0;
-    justify-content: center;
+    justify-content: space-between;
 
     &__row {
         @include make-row;
 
         justify-content: center;
+        align-items: center;
     }
 
     &__col {
