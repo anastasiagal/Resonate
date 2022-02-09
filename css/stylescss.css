@@ -714,6 +714,9 @@
   color: #fff;
   text-align: center;
   padding: 30px 0 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .location__title {
