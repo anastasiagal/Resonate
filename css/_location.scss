@@ -19,6 +19,10 @@
         &_secondary {
             @include make-col-ready;
             @include make-col(3);
+
+            @include breakpoint-sm {
+                @include make-col(4);
+            }
         }
     }
 
@@ -43,7 +47,7 @@
             background-color: transparent;
             color: $white;
             text-align: center;
-            padding: 0;
+            padding: 30px 0 40px;
         }
     }
 
