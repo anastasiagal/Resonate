@@ -724,6 +724,25 @@
 
 .location_clr-bg {
   background-color: #081580;
+  padding-bottom: 60px;
+}
+
+@media (max-width: 991px) {
+  .location_clr-bg {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .location_clr-bg {
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .location_clr-bg {
+    padding-bottom: 20px;
+  }
 }
 
 .location__items {
@@ -752,7 +771,7 @@
   background-color: transparent;
   color: #fff;
   text-align: center;
-  padding: 30px 0 40px;
+  padding: 0 0 40px;
 }
 
 .location__item_flex {
