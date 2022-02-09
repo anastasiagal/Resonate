@@ -624,6 +624,12 @@
   background-color: #F2F2F2;
 }
 
+@media (max-width: 991px) {
+  .location {
+    padding: 80px 0;
+  }
+}
+
 .location__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -668,7 +674,7 @@
   max-width: 25%;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .location__col_secondary {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 33.33333%;

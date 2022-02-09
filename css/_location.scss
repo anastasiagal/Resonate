@@ -2,6 +2,11 @@
     padding: 100px 0;
     background-color: $bg;
 
+    @include breakpoint-sm {
+        padding: 80px 0;
+
+    }
+
     &__row {
         @include make-row;
     }
@@ -20,7 +25,7 @@
             @include make-col-ready;
             @include make-col(3);
 
-            @include breakpoint-sm {
+            @include breakpoint-md {
                 @include make-col(4);
             }
         }
