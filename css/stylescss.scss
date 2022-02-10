@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 @import 'mixin';
 
-$white: #fff;
-$dark-blue: #081580;
-$light-blue: #00B6DD;
-$black: #010101;
-$black-rgba: rgba(1, 1, 1, 0.6);
-$grey: #D3D8E4;
-$green: #CCD5AE;
-$bg: #F2F2F2;
+$colors: (
+    white: #fff,
+    dark-blue: #081580,
+    light-blue: #00B6DD,
+    black: #010101,
+    black-rgba: rgba(1, 1, 1, 0.6),
+    grey: #D3D8E4,
+    green: #CCD5AE,
+);
+
+@function get-color($name) {
+    @return map-get($colors, $name);
+}
 
 @import 'hero';
 @import 'card';
@@ -21,9 +26,9 @@ html {
 }
 
 body {
-    color: $black;
+    color: get-color(black);
 }
 
 .container {
     @include make-container;
-  }
+}

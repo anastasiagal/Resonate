@@ -1,8 +1,8 @@
 .hero {
     @include background-mixin;
 
-    background-color: $black;
-    background-image: linear-gradient($black-rgba, $black-rgba),
+    background-color: get-color(black);
+    background-image: linear-gradient(get-color(black-rgba), get-color(black-rgba)),
         url("../images/hero-bg.jpg");
     position: relative;
     width: 100%;
@@ -47,6 +47,6 @@
         @include fonts-title;
 
         text-align: center;
-        color: $white;
+        color: get-color(white);
     }
 }

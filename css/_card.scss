@@ -43,7 +43,7 @@
     &__item {
         height: 100%;
         padding: 30px;
-        border: 1px solid $grey;
+        border: 1px solid get-color(grey);
         position: relative;
         display: flex;
         flex-direction: column;
@@ -66,11 +66,11 @@
         left: 0;
         text-transform: uppercase;
         padding: 6px 15px 8px 16px;
-        background-color: $light-blue;
-        color: $white;
+        background-color: get-color(light-blue);
+        color: get-color(white);
 
         #{$root}__item_clr-blue & { // если на item висит модификатор clr-blue, то меняем цвет фона у category
-            background-color: $dark-blue;
+            background-color: get-color(dark-blue);
         }
 
         @include breakpoint-xs {
@@ -112,11 +112,11 @@
     &__author {
         @include fonts(13px, 20px, 0.8px);
 
-        color: $light-blue;
+        color: get-color(light-blue);
         margin-bottom: 6px;
 
         #{$root}__item_clr-blue & { // если на item висит модификатор clr-blue, то меняем цвет фона у category
-            color: $dark-blue;
+            color: get-color(dark-blue);
         }
 
         @include breakpoint-xs {
