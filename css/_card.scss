@@ -140,10 +140,6 @@
     }
 
     &__text {
-        @include fonts(16px, 26px, 0.8px);
-
-        @include breakpoint-xs {
-            @include fonts(14px, 22px, 0.6px);
-        }
+        @include fonts-text;
     }
 }

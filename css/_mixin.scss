@@ -34,6 +34,14 @@
     }
 }
 
+@mixin fonts-text {
+    @include fonts(16px, 26px, 0.8px);
+
+    @include breakpoint-xs {
+        @include fonts(14px, 22px, 0.6px);
+    }
+}
+
 $breakpoints: (
     xxs: 575px,
     xs: 767px, // от 768 и ниже будет 100%
