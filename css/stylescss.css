@@ -619,7 +619,7 @@
   }
 }
 
-.location {
+.location_theme-light {
   padding: 100px 0;
   background-color: #F2F2F2;
 }
@@ -683,68 +683,6 @@
   }
 }
 
-.location__col_secondary {
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
-  max-width: 25%;
-}
-
-@media (max-width: 1199px) {
-  .location__col_secondary {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.33333%;
-            flex: 0 0 33.33333%;
-    max-width: 33.33333%;
-  }
-}
-
-@media (max-width: 767px) {
-  .location__col_secondary {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 41.66667%;
-            flex: 0 0 41.66667%;
-    max-width: 41.66667%;
-  }
-}
-
-@media (max-width: 575px) {
-  .location__col_secondary {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-.location_clr-bg {
-  background-color: #081580;
-  padding-bottom: 60px;
-}
-
-@media (max-width: 991px) {
-  .location_clr-bg {
-    padding-bottom: 40px;
-  }
-}
-
-@media (max-width: 767px) {
-  .location_clr-bg {
-    padding-bottom: 30px;
-  }
-}
-
-@media (max-width: 575px) {
-  .location_clr-bg {
-    padding-bottom: 20px;
-  }
-}
-
 .location__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -765,19 +703,6 @@
   height: 100%;
   background-color: #CCD5AE;
   padding: 30px 30px 40px;
-}
-
-.location__item_clr-dark {
-  background-color: transparent;
-  color: #fff;
-  text-align: center;
-  padding: 0 0 40px;
-}
-
-.location__item_flex {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .location__title {
@@ -804,28 +729,6 @@
   }
 }
 
-.location__title_size {
-  font-size: 22px;
-  line-height: 30px;
-  letter-spacing: 1.2px;
-}
-
-@media (max-width: 991px) {
-  .location__title_size {
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: 1px;
-  }
-}
-
-@media (max-width: 767px) {
-  .location__title_size {
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.8px;
-  }
-}
-
 .location__text {
   font-size: 16px;
   line-height: 26px;
@@ -838,6 +741,11 @@
     line-height: 22px;
     letter-spacing: 0.6px;
   }
+}
+
+.location_theme-dark {
+  background-color: #081580;
+  padding: 70px 0 60px;
 }
 
 html {
