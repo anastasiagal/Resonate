@@ -744,6 +744,14 @@
   }
 }
 
+.location__item_bg {
+  background-color: transparent;
+  padding: 0 0 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .location__title {
   font-size: 26px;
   line-height: 36px;
