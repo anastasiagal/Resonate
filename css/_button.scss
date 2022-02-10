@@ -1,50 +1,55 @@
 .buttons {
-    margin-top: 30px;
-    display: flex;
-    column-gap: 16px;
-    row-gap: 16px;
+  margin-top: 30px;
+  display: flex;
+  column-gap: 16px;
+  row-gap: 16px;
 
-    @include breakpoint-sm {
-        &_imageText {
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+  @include breakpoint-sm {
+    &_imageText {
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    @include breakpoint-xxs {
-        &_imageText {
-            flex-direction: column;
-        }
+  }
+  @include breakpoint-xxs {
+    &_imageText {
+      flex-direction: column;
     }
+  }
 }
 
 .button {
-    @include fonts(13px, 20px, 0.8px);
-    
-    border: 2px solid transparent;
-    padding: 7px 33px 9px;
-    color: get-color(white);
-    cursor: pointer;
-    transition: opacity 0.4s ease-out;
-    &:hover {
-        opacity: 0.6;
-    }
+  @include fonts(13px, 20px, 0.8px);
 
-    @each $name, $clr, $clrbrdr in (black, get-color(black), get-color(light-blue)) (blue, get-color(dark-blue), inherit) (light-blue, get-color(light-blue), get-color(light-blue)){
-        &_clr {
-            &-#{$name} {
-                background-color: $clr;
-                border-color: $clrbrdr;
-            }
-        }
-    }
+  border: 2px solid transparent;
+  padding: 7px 33px 9px;
+  color: get-color(white);
+  cursor: pointer;
+  transition: opacity 0.4s ease-out;
+  &:hover {
+    opacity: $hover-opacity;
+  }
 
-    @include breakpoint-sm {
-        padding: 9px 30px 11px;
+  @each $name, $clr,
+    $clrbrdr
+      in (black, get-color(black), get-color(light-blue))
+      (blue, get-color(dark-blue), inherit)
+      (light-blue, get-color(light-blue), get-color(light-blue))
+  {
+    &_clr {
+      &-#{$name} {
+        background-color: $clr;
+        border-color: $clrbrdr;
+      }
     }
+  }
 
-    @include breakpoint-xs {
-        @include fonts(12px, 18px, inherit);
+  @include breakpoint-sm {
+    padding: 9px 30px 11px;
+  }
 
-        padding: 8px 28px 10px;
-    }
+  @include breakpoint-xs {
+    @include fonts(12px, 18px, inherit);
+
+    padding: 8px 28px 10px;
+  }
 }

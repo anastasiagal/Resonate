@@ -1,117 +1,117 @@
 .location {
-    padding: 100px 0;
+  padding: 100px 0;
 
-    @include breakpoint-md {
-        padding: 80px 0;
+  @include breakpoint-md {
+    padding: 80px 0;
+  }
+
+  @include breakpoint-sm {
+    padding: 70px 0;
+  }
+
+  @include breakpoint-xs {
+    padding: 60px 0;
+  }
+
+  @include breakpoint-xxs {
+    padding: 50px 0;
+  }
+
+  &_theme-dark {
+    background-color: get-color(dark-blue);
+    color: get-color(white);
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    row-gap: 30px;
+    &_flex {
+      justify-content: center;
     }
 
+    @include breakpoint-md {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__row {
+    @include make-row;
+  }
+
+  &__col {
+    @include make-col-ready;
+
+    &_large {
+      @include make-col(4);
+
+      @include breakpoint-md {
+        @include make-col(6);
+      }
+
+      @include breakpoint-xxs {
+        @include make-col(12);
+      }
+    }
+
+    &_small {
+      @include make-col(3);
+
+      @include breakpoint-md {
+        @include make-col(4);
+      }
+
+      @include breakpoint-xs {
+        @include make-col(6);
+      }
+
+      @include breakpoint-xxs {
+        @include make-col(12);
+      }
+    }
+  }
+
+  &__item {
+    height: 100%;
+
+    &_card {
+      background-color: get-color(green);
+      padding: 30px 30px 40px;
+    }
+
+    &_center {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    @include fonts(26px, 36px, 1.2px);
+
+    margin-bottom: 10px;
+    font-weight: 700;
+
     @include breakpoint-sm {
-        padding: 70px 0;
+      @include fonts(24px, 34px, 1px);
     }
 
     @include breakpoint-xs {
-        padding: 60px 0;
+      @include fonts(22px, 32px, 1px);
     }
 
-    @include breakpoint-xxs {
-        padding: 50px 0;
+    &_small {
+      @include fonts(22px, 30px, 1.2px);
+
+      @include breakpoint-sm {
+        @include fonts(20px, 28px, 1px);
+      }
+
+      @include breakpoint-xs {
+        @include fonts(16px, 24px, 0.8px);
+      }
     }
+  }
 
-    &_theme-dark {
-        background-color: get-color(dark-blue);
-        color: get-color(white);
-    }
-
-    &__items {
-        display: flex;
-        justify-content: space-between;
-        row-gap: 30px;
-        &_flex {
-            justify-content: center;
-        }
-
-        @include breakpoint-md {
-            flex-wrap: wrap;
-        }
-    }
-
-    &__row {
-        @include make-row;
-    }
-
-    &__col {
-        @include make-col-ready;
-
-        &_large {
-            @include make-col(4);
-
-            @include breakpoint-md {
-                @include make-col(6);
-            }
-
-            @include breakpoint-xxs {
-                @include make-col(12);
-            }
-        }
-
-        &_small {
-            @include make-col(3);
-
-            @include breakpoint-md {
-                @include make-col(4);
-            }
-
-            @include breakpoint-sm {
-                @include make-col(6);
-            }
-
-            @include breakpoint-xxs {
-                @include make-col(12);
-            }
-        }
-    }
-
-    &__item {
-        height: 100%;
-
-        &_card {
-            background-color: get-color(green);
-            padding: 30px 30px 40px;
-        }
-        
-        &_center {
-            text-align: center;
-        }
-    }
-
-    &__title {
-        @include fonts(26px, 36px, 1.2px);
-
-        margin-bottom: 10px;
-        font-weight: 700;
-
-        @include breakpoint-sm {
-            @include fonts(24px, 34px, 1px);
-        }
-
-        @include breakpoint-xs {
-            @include fonts(22px, 32px, 1px);
-        }
-
-        &_small {
-            @include fonts(22px, 30px, 1.2px);
-
-            @include breakpoint-sm {
-                @include fonts(20px, 28px, 1px);
-            }
-
-            @include breakpoint-xs {
-                @include fonts(16px, 24px, 0.8px);
-            }
-        }
-    }
-
-    &__text {
-        @include fonts-text;
-    }
+  &__text {
+    @include fonts-text;
+  }
 }

@@ -1,123 +1,136 @@
 @mixin background-mixin {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 @mixin fonts($size, $height, $spacing) {
-    font-size: $size;
-    line-height: $height;
-    letter-spacing: $spacing;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
 }
 
 @mixin fonts-title {
-    @include fonts(62px, 68px, 1.4px);
+  @include fonts(62px, 68px, 1.4px);
 
-    @include breakpoint-md {
-        @include fonts(54px, 60px, 1.2px);
-    }
+  @include breakpoint-md {
+    @include fonts(54px, 60px, 1.2px);
+  }
 
-    @include breakpoint-sm {
-        @include fonts(46px, 48px, 1px);
-    }
+  @include breakpoint-sm {
+    @include fonts(46px, 48px, 1px);
+  }
 }
 
 @mixin fonts-subtitle {
-    @include fonts(22px, 30px, 1.2px);
+  @include fonts(22px, 30px, 1.2px);
 
-    @include breakpoint-md {
-        @include fonts(20px, 28px, 1.2px);
-    }
+  @include breakpoint-md {
+    @include fonts(20px, 28px, 1.2px);
+  }
 
-    @include breakpoint-sm {
-        @include fonts(18px, 26px, 1px);
-    }
+  @include breakpoint-sm {
+    @include fonts(18px, 26px, 1px);
+  }
 }
 
 @mixin fonts-text {
-    @include fonts(16px, 26px, 0.8px);
+  @include fonts(16px, 26px, 0.8px);
 
-    @include breakpoint-xs {
-        @include fonts(14px, 22px, 0.6px);
-    }
+  @include breakpoint-xs {
+    @include fonts(14px, 22px, 0.6px);
+  }
 }
 
 $breakpoints: (
-    xxs: 575px,
-    xs: 767px, // от 768 и ниже будет 100%
-    sm: 991px, // от 992 и ниже будет 720
-    md: 1199px, // от 1200 и ниже будет 950
+  xxs: 575px,
+  xs: 767px,
+  // от 768 и ниже будет 100%
+    sm: 991px,
+  // от 992 и ниже будет 720
+    md: 1199px,
+  // от 1200 и ниже будет 950
 ); // размер окна браузера
 
 $container-width: (
-    xs: 546px,
-    sm: 720px,
-    md: 940px, // ТУТ УМЕНЬШАЕМ НА 20ПХ (КАК РАЗ ВЫЧЕТ ПРОКРУТКИ)
+  xs: 546px,
+  sm: 720px,
+  md: 940px,
+  // ТУТ УМЕНЬШАЕМ НА 20ПХ (КАК РАЗ ВЫЧЕТ ПРОКРУТКИ)
     xl: 1140px
 ); // ширина контейнера (без учета строки - я про -15px)
 
 $grid-gutter-width: 30px; // отсуп между колонками
 $grid-columns: 12; // количество колонок
 
-@mixin make-row() { // строка
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: ($grid-gutter-width / -2); // -15px
-    margin-left: ($grid-gutter-width / -2); // -15px
+@mixin make-row() {
+  // строка
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: ($grid-gutter-width / -2); // -15px
+  margin-left: ($grid-gutter-width / -2); // -15px
 }
 
-@mixin make-col-ready() { // общие стили для колонки
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: $grid-gutter-width / 2; // 15px
-    padding-left: $grid-gutter-width / 2; // 15px
+@mixin make-col-ready() {
+  // общие стили для колонки
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: $grid-gutter-width / 2; // 15px
+  padding-left: $grid-gutter-width / 2; // 15px
 }
 
-@mixin make-col($size, $columns: $grid-columns) { // ширина колонки
-    flex: 0 0 percentage($size / $columns);
-    max-width: percentage($size / $columns);
+@mixin make-col($size, $columns: $grid-columns) {
+  // ширина колонки
+  flex: 0 0 percentage($size / $columns);
+  max-width: percentage($size / $columns);
 }
 
 // media
-@mixin breakpoint-md { // tablet landscape
-    @media (max-width: map-get($breakpoints, md)) {
-        @content;
-    }
+@mixin breakpoint-md {
+  // tablet landscape
+  @media (max-width: map-get($breakpoints, md)) {
+    @content;
+  }
 }
 
-@mixin breakpoint-sm { // tablet port + mobile landscape
-    @media (max-width: map-get($breakpoints, sm)) {
-        @content;
-    }
+@mixin breakpoint-sm {
+  // tablet port + mobile landscape
+  @media (max-width: map-get($breakpoints, sm)) {
+    @content;
+  }
 }
 
-@mixin breakpoint-xs { // mobile
-    @media (max-width: map-get($breakpoints, xs)) {
-        @content;
-    }
+@mixin breakpoint-xs {
+  // mobile
+  @media (max-width: map-get($breakpoints, xs)) {
+    @content;
+  }
 }
 
-@mixin breakpoint-xxs { // mobile
-    @media (max-width: map-get($breakpoints, xxs)) {
-        @content;
-    }
+@mixin breakpoint-xxs {
+  // mobile
+  @media (max-width: map-get($breakpoints, xxs)) {
+    @content;
+  }
 }
 
-@mixin make-container { // ширина контейнера
-    width: map-get($container-width, xl) !important;
-    margin: 0 auto !important;
+@mixin make-container {
+  // ширина контейнера
+  width: map-get($container-width, xl) !important;
+  margin: 0 auto !important;
 
-    @include breakpoint-md {
-        width: map-get($container-width, md) !important;
-    }
-    @include breakpoint-sm {
-        width: map-get($container-width, sm) !important;
-    }
+  @include breakpoint-md {
+    width: map-get($container-width, md) !important;
+  }
+  @include breakpoint-sm {
+    width: map-get($container-width, sm) !important;
+  }
 
-    @include breakpoint-xs { // встает на всю ширину окна, резиновый
-        padding-left: $grid-gutter-width / 2 !important;
-        padding-right: $grid-gutter-width / 2 !important;
-        width: auto !important;
-    }
+  @include breakpoint-xs {
+    // встает на всю ширину окна, резиновый
+    padding-left: $grid-gutter-width / 2 !important;
+    padding-right: $grid-gutter-width / 2 !important;
+    width: auto !important;
+  }
 }

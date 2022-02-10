@@ -1,94 +1,100 @@
 .imageText {
-    background-color: get-color(black);
-    padding: 100px 0;
+  background-color: get-color(black);
+  padding: 100px 0;
 
-    &__row {
-        @include make-row;
-        justify-content: space-between;
-        align-items: center;
-        
-        @include breakpoint-sm {
-            justify-content: center;
-        }
-    }
-
-    &__col {
-        @include make-col-ready;
-        @include make-col(6);
-
-        @include breakpoint-sm {
-            @include make-col(10);
-            text-align: center;
-            margin-right: 0;
-        }
-
-        @include breakpoint-xs {
-            @include make-col(8);
-            text-align: center;
-            margin-right: 0;
-        }
-
-        @include breakpoint-xxs {
-            @include make-col(12);
-            text-align: center;
-            margin-right: 0;
-        }
-    }
-
-    @include breakpoint-md {
-        padding: 70px 0;
-    }
+  &__row {
+    @include make-row;
+    justify-content: space-between;
+    align-items: center;
 
     @include breakpoint-sm {
-        flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__col {
+    @include make-col-ready;
+
+    &_text {
+      @include make-col(6);
+
+      @include breakpoint-sm {
+        @include make-col(10);
+        text-align: center;
+        margin-right: 0;
+      }
+
+      @include breakpoint-xs {
+        @include make-col(8);
+        text-align: center;
+        margin-right: 0;
+      }
+
+      @include breakpoint-xxs {
+        @include make-col(12);
+        text-align: center;
+        margin-right: 0;
+      }
     }
 
-    @include breakpoint-xs {
-        padding-top: 60px;
-        padding-bottom: 60px;
+    &_image {
+      @include make-col(5);
+
+      @include breakpoint-md {
+        @include make-col(6);
+      }
+
+      @include breakpoint-sm {
+        @include make-col(10);
+      }
+
+      @include breakpoint-xs {
+        @include make-col(12);
+      }
     }
+  }
 
-    &__title {
-        @include fonts-title;
+  @include breakpoint-md {
+    padding: 70px 0;
+  }
 
-        color: get-color(light-blue);
-        margin-bottom: 22px;
+  @include breakpoint-sm {
+    flex-wrap: wrap;
+  }
+
+  @include breakpoint-xs {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__title {
+    @include fonts-title;
+
+    color: get-color(light-blue);
+    margin-bottom: 22px;
+  }
+
+  &__text {
+    @include fonts-subtitle;
+
+    color: get-color(white);
+    margin-bottom: 10px;
+
+    @include breakpoint-sm {
+      margin-bottom: 0;
     }
+  }
 
-    &__text {
-        @include fonts-subtitle;
-
-        color: get-color(white);
-        margin-bottom: 10px;
-
-        @include breakpoint-sm {
-            margin-bottom: 0;
-        }
-    }
-
-    &__image {
-        @include breakpoint-sm {
-            display: flex;
-            justify-content: center;
-        }
-
-        &__col {
-            @include make-col-ready;
-            @include make-col(5);
-
-            @include breakpoint-sm {
-                @include make-col(10);
-            }
-
-            @include breakpoint-xs {
-                @include make-col(12);
-            }
-        }
+  &__image {
+    @include breakpoint-sm {
+      display: flex;
+      justify-content: center;
     }
 
     &__image-hub {
-        @include breakpoint-sm {
-            margin-top: 40px;
-        }
+      @include breakpoint-sm {
+        margin-top: 40px;
+      }
     }
+  }
 }
