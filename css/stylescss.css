@@ -502,6 +502,7 @@
 }
 
 .imageText__col_image {
+  margin-top: 40px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 41.66667%;
           flex: 0 0 41.66667%;
@@ -532,6 +533,12 @@
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .imageText__col_image {
+    margin-top: 30px;
   }
 }
 
@@ -617,12 +624,6 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-}
-
-@media (max-width: 991px) {
-  .imageText__image__image-hub {
-    margin-top: 40px;
   }
 }
 
