@@ -20,18 +20,21 @@
 
       @include breakpoint-sm {
         @include make-col(10);
+
         text-align: center;
         margin-right: 0;
       }
 
       @include breakpoint-xs {
         @include make-col(8);
+
         text-align: center;
         margin-right: 0;
       }
 
       @include breakpoint-xxs {
         @include make-col(12);
+        
         text-align: center;
         margin-right: 0;
       }

@@ -69,8 +69,7 @@
     background-color: get-color(light-blue);
     color: get-color(white);
 
-    #{$root}__item_clr-blue & {
-      // если на item висит модификатор clr-blue, то меняем цвет фона у category
+    #{$root}__item_clr-blue & { // если на item висит модификатор clr-blue, то меняем цвет фона у category
       background-color: get-color(dark-blue);
     }
 
@@ -116,8 +115,7 @@
     color: get-color(light-blue);
     margin-bottom: 6px;
 
-    #{$root}__item_clr-blue & {
-      // если на item висит модификатор clr-blue, то меняем цвет фона у category
+    #{$root}__item_clr-blue & { // если на item висит модификатор clr-blue, то меняем цвет фона у author
       color: get-color(dark-blue);
     }
 
