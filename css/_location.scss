@@ -26,13 +26,18 @@
     display: flex;
     justify-content: space-between;
     row-gap: 30px;
-    
+
     &_flex {
       justify-content: center;
     }
 
     @include breakpoint-md {
       flex-wrap: wrap;
+      row-gap: 50px;
+    }
+
+    @include breakpoint-xs {
+      row-gap: 40px;
     }
   }
 
