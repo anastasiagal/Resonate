@@ -502,6 +502,8 @@
 }
 
 .imageText__col_image {
+  display: block;
+  max-width: 100%;
   margin-top: 40px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 41.66667%;
@@ -661,16 +663,13 @@
 }
 
 .location__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   row-gap: 30px;
 }
 
-.location__items_flex {
+.location__items_center {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -678,8 +677,6 @@
 
 @media (max-width: 1199px) {
   .location__items {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     row-gap: 50px;
   }
 }

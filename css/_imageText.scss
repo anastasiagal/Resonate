@@ -34,13 +34,15 @@
 
       @include breakpoint-xxs {
         @include make-col(12);
-        
+
         text-align: center;
         margin-right: 0;
       }
     }
 
     &_image {
+      display: block;
+		  max-width: 100%;
       margin-top: 40px;
 
       @include make-col(5);
