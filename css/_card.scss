@@ -73,21 +73,33 @@
       background-color: get-color(dark-blue);
     }
 
-    @include breakpoint-xs {
+    @include breakpoint-sm {
+      top: 9px;
+
       @include fonts(12px, 20px, 1px);
+      
     }
   }
 
   &__img {
     @include background-mixin;
+
+    margin-bottom: 20px;
+
     &::before {
       position: static;
       display: block;
       content: "";
-      padding: 57.09% 0 0;
-    }
+      padding: 57.1% 0 0;
 
-    margin-bottom: 20px;
+      @include breakpoint-sm {
+        padding: 52% 0 0;
+      }
+
+      @include breakpoint-xs {
+        padding: 38.2% 0 0;
+      }
+    }
 
     @include breakpoint-sm {
       margin-bottom: 18px;
@@ -95,9 +107,6 @@
 
     @include breakpoint-xs {
       margin-bottom: 12px;
-      &::before {
-        padding: 33% 0 0;
-      }
     }
 
     $nums: one, two, three, four, five, six;
@@ -110,17 +119,13 @@
   }
 
   &__author {
-    @include fonts(13px, 20px, 0.8px);
+    @include fonts-small;
 
     color: get-color(light-blue);
     margin-bottom: 6px;
 
     #{$root}__item_clr-blue & { // если на item висит модификатор clr-blue, то меняем цвет фона у author
       color: get-color(dark-blue);
-    }
-
-    @include breakpoint-xs {
-      @include fonts(12px, 18px, inherit);
     }
   }
 

@@ -5,6 +5,8 @@
   row-gap: 16px;
 
   @include breakpoint-sm {
+    margin-top: 23px;
+
     &_imageText {
       justify-content: center;
       flex-wrap: wrap;
@@ -18,7 +20,7 @@
 }
 
 .button {
-  @include fonts(13px, 20px, 0.8px);
+  @include fonts-small;
 
   border: 2px solid transparent;
   padding: 7px 33px 9px;
@@ -44,12 +46,10 @@
   }
 
   @include breakpoint-sm {
-    padding: 9px 30px 11px;
+    padding: 6px 23px 9px;
   }
 
   @include breakpoint-xs {
-    @include fonts(12px, 18px, inherit);
-
     padding: 8px 28px 10px;
   }
 }

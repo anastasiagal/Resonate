@@ -37,8 +37,16 @@
 @mixin fonts-text {
   @include fonts(16px, 26px, 0.8px);
 
-  @include breakpoint-xs {
+  @include breakpoint-sm {
     @include fonts(14px, 22px, 0.6px);
+  }
+}
+
+@mixin fonts-small {
+  @include fonts(13px, 20px, 0.8px);
+
+  @include breakpoint-xs {
+    @include fonts(12px, 18px, inherit);
   }
 }
 
@@ -52,7 +60,7 @@ $breakpoints: (
 $container-width: (
   xs: 546px,
   sm: 720px,
-  md: 940px, // ТУТ УМЕНЬШАЕМ НА 20ПХ (КАК РАЗ ВЫЧЕТ ПРОКРУТКИ)
+  md: 940px, // ТУТ УМЕНЬШАЕМ НА 20px (КАК РАЗ ВЫЧЕТ ПРОКРУТКИ)
   xl: 1140px
 ); // ширина контейнера (без учета строки - я про -15px)
 

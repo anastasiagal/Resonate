@@ -30,13 +30,13 @@
       justify-content: center;
     }
 
-    @include breakpoint-md {
-      row-gap: 50px;
-    }
+    // @include breakpoint-md {
+    //   row-gap: 50px;
+    // }
 
-    @include breakpoint-xs {
-      row-gap: 40px;
-    }
+    // @include breakpoint-xs {
+    //   row-gap: 40px;
+    // }
   }
 
   &__row {
@@ -94,25 +94,16 @@
     margin-bottom: 10px;
     font-weight: 700;
 
-    @include breakpoint-sm {
+    @include breakpoint-md {
       @include fonts(24px, 34px, 1px);
     }
 
-    @include breakpoint-xs {
+    @include breakpoint-sm {
       @include fonts(22px, 32px, 1px);
     }
 
     &_small {
-      @include fonts(22px, 30px, 1.2px);
-
-      @include breakpoint-sm {
-        @include fonts(20px, 28px, 1px);
-      }
-
-      @include breakpoint-xs {
-        @include fonts(16px, 24px, 0.8px);
-      }
-    }
+      @include fonts-subtitle;
   }
 
   &__text {
