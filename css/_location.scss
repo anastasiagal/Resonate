@@ -29,14 +29,6 @@
     &_center {
       justify-content: center;
     }
-
-    // @include breakpoint-md {
-    //   row-gap: 50px;
-    // }
-
-    // @include breakpoint-xs {
-    //   row-gap: 40px;
-    // }
   }
 
   &__row {
@@ -104,9 +96,10 @@
 
     &_small {
       @include fonts-subtitle;
-  }
+    }
 
-  &__text {
-    @include fonts-text;
+    &__text {
+      @include fonts-text;
+    }
   }
 }
