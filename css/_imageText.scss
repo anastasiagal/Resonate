@@ -76,6 +76,11 @@
     padding-bottom: 60px;
   }
 
+  @include breakpoint-xxs {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   &__title {
     @include fonts-title;
 

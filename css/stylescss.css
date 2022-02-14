@@ -590,6 +590,13 @@
   }
 }
 
+@media (max-width: 575px) {
+  .imageText {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
 .imageText__title {
   font-size: 62px;
   line-height: 68px;
