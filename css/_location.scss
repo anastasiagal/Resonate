@@ -28,6 +28,18 @@
 
     &_center {
       justify-content: center;
+
+      @include breakpoint-md {
+        row-gap: 50px;
+      }
+
+      @include breakpoint-xs {
+        row-gap: 40px;
+      }
+
+      @include breakpoint-xxs {
+        row-gap: 30px;
+      }
     }
   }
 

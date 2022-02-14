@@ -689,6 +689,24 @@
           justify-content: center;
 }
 
+@media (max-width: 1199px) {
+  .location__items_center {
+    row-gap: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .location__items_center {
+    row-gap: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  .location__items_center {
+    row-gap: 30px;
+  }
+}
+
 .location__row {
   display: -webkit-box;
   display: -ms-flexbox;
