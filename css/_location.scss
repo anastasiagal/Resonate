@@ -85,6 +85,10 @@
     &_card {
       background-color: get-color(green);
       padding: 30px 30px 40px;
+
+      @include breakpoint-xs {
+        padding: 16px 16px 30px;
+      }
     }
 
     &_center {
@@ -108,10 +112,14 @@
 
     &_small {
       @include fonts-subtitle;
-    }
 
-    &__text {
-      @include fonts-text;
+      @include breakpoint-sm {
+        @include fonts(16px, 24px, 0.8px);
+      }
     }
+  }
+
+  &__text {
+    @include fonts-text;
   }
 }

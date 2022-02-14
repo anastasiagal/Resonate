@@ -46,10 +46,6 @@
   }
 
   @include breakpoint-sm {
-    padding: 6px 23px 9px;
-  }
-
-  @include breakpoint-xs {
-    padding: 8px 28px 10px;
+    padding: 6px 30px 9px;
   }
 }

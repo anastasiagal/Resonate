@@ -77,7 +77,14 @@
       top: 9px;
 
       @include fonts(12px, 20px, 1px);
-      
+    }
+
+    @include breakpoint-xs {
+      top: 0;
+    }
+
+    @include breakpoint-xxs {
+      top: -2;
     }
   }
 
@@ -97,7 +104,11 @@
       }
 
       @include breakpoint-xs {
-        padding: 38.2% 0 0;
+        padding: 62.5% 0 0;
+      }
+
+      @include breakpoint-xxs {
+        padding: 54.5% 0 0;
       }
     }
 
