@@ -233,12 +233,6 @@
   }
 }
 
-@media (max-width: 575px) {
-  .card__category {
-    top: -2;
-  }
-}
-
 .card__img {
   background-repeat: no-repeat;
   background-position: center;
