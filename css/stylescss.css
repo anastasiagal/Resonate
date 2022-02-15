@@ -743,6 +743,15 @@
   }
 }
 
+@media (max-width: 575px) {
+  .logo__col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 29.16667%;
+            flex: 0 0 29.16667%;
+    max-width: 29.16667%;
+  }
+}
+
 .logo__image {
   display: block;
   max-width: 100%;

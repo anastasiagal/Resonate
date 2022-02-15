@@ -52,6 +52,10 @@
       @include breakpoint-sm {
         @include make-col(2.5);
       }
+
+      @include breakpoint-xxs {
+        @include make-col(3.5);
+      }
     }
   
     &__image {
