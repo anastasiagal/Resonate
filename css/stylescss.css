@@ -714,6 +714,14 @@
           align-items: center;
 }
 
+@media (max-width: 991px) {
+  .logo__row {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .logo__col {
   position: relative;
   width: 100%;
@@ -726,12 +734,12 @@
   max-width: 16.66667%;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .logo__col {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 16.66667%;
-            flex: 0 0 16.66667%;
-    max-width: 16.66667%;
+        -ms-flex: 0 0 20.83333%;
+            flex: 0 0 20.83333%;
+    max-width: 20.83333%;
   }
 }
 
