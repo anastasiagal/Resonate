@@ -8,7 +8,8 @@ $colors: (
   black: #010101,
   black-rgba: rgba(1, 1, 1, 0.6),
   grey: #d3d8e4,
-  green: #ccd5ae
+  green: #ccd5ae,
+  beige: #feebd6
 );
 
 $font-notoSans: "Noto Sans", sans-serif;
@@ -22,6 +23,7 @@ $hover-opacity: 0.75;
 @import "card";
 @import "button";
 @import "imageText";
+@import "logo";
 @import "location";
 
 html {
