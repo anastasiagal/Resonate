@@ -60,6 +60,7 @@
   }
 
   @include breakpoint-sm {
+    padding: 70px 0;
     flex-wrap: wrap;
   }
 
@@ -94,6 +95,10 @@
     display: block;
 		max-width: 100%;
     margin-top: 55px;
+
+    @include breakpoint-sm {
+      margin-top: 40px;
+    }
 
     @include breakpoint-xxs {
       margin-top: 30px;

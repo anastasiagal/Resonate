@@ -1,77 +1,77 @@
 .logo {
-    padding: 100px 0;
-    background-color: get-color(beige);
+  padding: 100px 0;
+  background-color: get-color(beige);
+  
+  @include breakpoint-md {
+    padding: 80px 0;
+  }
+  
+  @include breakpoint-sm {
+    padding: 70px 0;
+  }
+  
+  @include breakpoint-xs {
+    padding: 60px 0;
+  }
+  
+  @include breakpoint-xxs {
+    padding: 50px 0;
+  }
+  
+  &__items {
+    justify-content: center;
+    row-gap: 70px;
   
     @include breakpoint-md {
-      padding: 80px 0;
+    row-gap: 57px;
     }
   
     @include breakpoint-sm {
-      padding: 70px 0;
+    row-gap: 40px;
     }
   
     @include breakpoint-xs {
-      padding: 60px 0;
+    row-gap: 30px;
+    }
+  }
+  
+  &__row {
+    @include make-row;
+  
+    align-items: center;
+  
+    @include breakpoint-sm {
+    justify-content: space-between;
+    }
+  }
+  
+  &__col {
+    @include make-col-ready;
+  
+    &_large {
+    @include make-col(2);
+  
+    @include breakpoint-sm {
+      @include make-col(2.5);
     }
   
     @include breakpoint-xxs {
-      padding: 50px 0;
+      @include make-col(4);
+    }
     }
   
-    &__items {
-      justify-content: center;
-      row-gap: 70px;
+    &_small {
+    @include make-col(2);
   
-      @include breakpoint-md {
-        row-gap: 57px;
-      }
-  
-      @include breakpoint-sm {
-        row-gap: 40px;
-      }
-  
-      @include breakpoint-xs {
-        row-gap: 30px;
-      }
+    @include breakpoint-xxs {
+      @include make-col(4);
     }
-  
-    &__row {
-      @include make-row;
-  
-      align-items: center;
-  
-      @include breakpoint-sm {
-        justify-content: space-between;
-      }
     }
+  }
   
-    &__col {
-      @include make-col-ready;
-
-      &_large {
-        @include make-col(2);
-
-        @include breakpoint-sm {
-            @include make-col(2.5);
-        }
-
-        @include breakpoint-xxs {
-            @include make-col(4);
-        }
-      }
-
-      &_small {
-        @include make-col(2);
-
-        @include breakpoint-xxs {
-            @include make-col(4);
-        }
-      }
-    }
-  
-    &__image {
-      display: block;
-      max-width: 100%;
-    }
+  &__image {
+    display: block;
+    max-width: 100%;
+  }
   }
   
