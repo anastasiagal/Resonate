@@ -95,6 +95,10 @@
       content: "";
       padding: 57.1% 0 0;
 
+      @include breakpoint-md {
+        padding: 43.1% 0 0;
+      }
+
       @include breakpoint-sm {
         padding: 52% 0 0;
       }

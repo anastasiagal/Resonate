@@ -47,17 +47,14 @@
   
     &__col {
       @include make-col-ready;
-
-      &_large {
-        @include make-col(2);
-
-        @include breakpoint-sm {
-            @include make-col(3);
-        }
+      @include make-col(2);
+  
+      @include breakpoint-sm {
+        @include make-col(2.5);
       }
 
-      &_small {
-        @include make-col(2);
+      @include breakpoint-xxs {
+        @include make-col(3.5);
       }
     }
   
