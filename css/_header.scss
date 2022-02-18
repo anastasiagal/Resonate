@@ -1,0 +1,7 @@
+.header {
+    background-color: get-color(black);
+
+    &__inner {
+        display: flex;
+    }
+}

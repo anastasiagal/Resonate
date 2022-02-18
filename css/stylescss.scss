@@ -19,11 +19,12 @@ $hover-opacity: 0.75;
   @return map-get($colors, $name);
 }
 
+@import "header";
 @import "hero";
 @import "card";
 @import "button";
 @import "imageText";
-@import "logo";
+@import "logos";
 @import "location";
 
 html {

@@ -1,4 +1,4 @@
-.logo {
+.logos {
   padding: 100px 0;
   background-color: get-color(beige);
   
@@ -18,8 +18,11 @@
     padding: 50px 0;
   }
   
-  &__items {
+  &__row {
+    @include make-row;
+  
     justify-content: center;
+    align-items: center;
     row-gap: 70px;
   
     @include breakpoint-md {
@@ -35,20 +38,8 @@
     }
   }
   
-  &__row {
-    @include make-row;
-  
-    align-items: center;
-  
-    @include breakpoint-sm {
-    justify-content: space-between;
-    }
-  }
-  
   &__col {
     @include make-col-ready;
-  
-    &_large {
     @include make-col(2);
   
     @include breakpoint-sm {
@@ -58,20 +49,11 @@
     @include breakpoint-xxs {
       @include make-col(4);
     }
-    }
-  
-    &_small {
-    @include make-col(2);
-  
-    @include breakpoint-xxs {
-      @include make-col(4);
-    }
-    }
   }
   
   &__image {
     display: block;
     max-width: 100%;
   }
-  }
+}
   
